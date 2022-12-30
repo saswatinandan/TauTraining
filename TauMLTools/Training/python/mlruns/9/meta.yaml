@@ -1,0 +1,4 @@
+artifact_location: file:///afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/9
+experiment_id: '9'
+lifecycle_stage: active
+name: correct_scaling_largestat

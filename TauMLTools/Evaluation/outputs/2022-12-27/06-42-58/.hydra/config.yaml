@@ -1,0 +1,29 @@
+training_cfg_upd:
+  Setup:
+    n_tau: 250
+    dataloader_core: TauMLTools/Training/interface/DataLoader_main.h
+    debug: false
+    include_mismatched: true
+  SetupNN:
+    n_batches: -1
+    n_batches_val: -1
+    validation_split: 0.0
+    max_queue_size: 1
+    n_load_workers: 1
+path_to_mlflow: ../../TauMLTools/Training/python/mlruns/
+experiment_id: 9
+run_id: 51e57c044557486fbac90c1e0a65eb32
+path_to_training_cfg: ${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/input_cfg/training_cfg.yaml
+scaling_cfg: ${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/input_cfg/scaling_params_v5.json
+path_to_input_dir: /afs/cern.ch/work/s/snandan/public/TauML_validation/GluGluHToTauTau_PU200/
+input_filename: eventTuple_2
+prediction_overwrite: true
+sample_alias: GluGluHToTauTau
+output_filename: ${input_filename}_pred
+gpu_cfg:
+  gpu_mem: 7
+  gpu_index: 0
+verbose: true
+checkout_train_repo: false
+toKeepID: null
+save_input_names: null

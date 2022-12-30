@@ -1,0 +1,51 @@
+discriminator:
+  name: DeepTau (v2.5)
+  raw: true
+  pred_column_prefix: node_
+  pred_column: ${.pred_column_prefix}${vs_type}
+  target_column_prefix: node_
+  wp_from: pred_column
+  wp_thresholds: working_points.json
+  wp_thresholds_map: null
+apply_dm_cuts: (tau_decayMode != 5) & (tau_decayMode != 6)
+path_to_mlflow: ???
+experiment_id: 1
+run_id: cb73d758436d482ab4ecc9466ee1dcc9
+vs_type: jet
+dataset_alias: QCD
+pt_bins:
+- - 20
+  - 100
+- - 100
+  - 1000
+eta_bins:
+- - 0
+  - 2.5
+dm_bins:
+- - 0
+  - 1
+  - 2
+  - 10
+  - 11
+input_branches:
+- tau_pt
+- tau_eta
+- tau_decayMode
+- tau_dz
+cuts: (${apply_dm_cuts}) and (abs(tau_dz) < 0.2)
+WPs_to_require: null
+input_samples:
+  ggH:
+  - tau
+  QCD_Pt-300To470_PU200:
+  - ${vs_type}
+path_to_input: null
+path_to_pred: ${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5
+path_to_target: ${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5
+path_to_weights_taus: null
+path_to_weights_vs_type: null
+roc_prune_decimal:
+  e: 3
+  mu: 4
+  jet: 3
+path_to_mlfow: ../Training/python/mlruns/

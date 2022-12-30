@@ -1,0 +1,2 @@
+QCD: dir=(QCD_Pt-.*) file=eventTuple_.* types=jet
+Glu: dir=(Glu.*) file=eventTuple_.* types=tau

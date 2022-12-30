@@ -1,0 +1,4 @@
+{
+    "/afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/4/f46ebb68f37b4906b3e6bbcef7729e10/artifacts/predictions/jet/eventTuple_2_pred.h5": "/afs/cern.ch/work/s/snandan/public/TauML_validation/QCD_Pt-50To80_PU200/eventTuple_2.root",
+    "/afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/4/f46ebb68f37b4906b3e6bbcef7729e10/artifacts/predictions/jet/eventTuple_1_pred.h5": "/afs/cern.ch/work/s/snandan/public/TauML_validation/QCD_Pt-20To30_PU200/eventTuple_1.root"
+}

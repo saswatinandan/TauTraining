@@ -1,0 +1,9 @@
+Weights imbalance: 1.04578, imbalance threshold: 100000
+Files for training: 15
+Files for validation: 0
+Compiling DataLoader headers.
+File exists:  /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Evaluation/../../TauMLTools/Training/python/mlruns/1/cb73d758436d482ab4ecc9466ee1dcc9/artifacts/predictions/QCD_Pt-300To470_PU200/eventTuple_1_pred.h5
+
+
+--> Processing file /afs/cern.ch/work/s/snandan/public/TauML/QCD_Pt-300To470_PU200/eventTuple_1.root, number of taus: 27635
+

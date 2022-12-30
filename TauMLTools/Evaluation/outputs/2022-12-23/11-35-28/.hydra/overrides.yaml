@@ -1,0 +1,6 @@
+- path_to_mlflow=../../TauMLTools/Training/python/mlruns/
+- +experiment_id=6
+- run_id=1fb0af43ef1949fb98aac63647527c84
+- sample_alias=GluGluHToTauTau
+- +path_to_input_dir=/afs/cern.ch/work/s/snandan/public/TauML_validation/GluGluHToTauTau_PU200/
+- +input_filename=eventTuple_2

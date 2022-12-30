@@ -1,0 +1,6 @@
+- path_to_mlflow=../../TauMLTools/Training/python/mlruns/
+- +experiment_id=1
+- run_id=4345597bee1942c0bd6724b3339115cb
+- sample_alias=QCD_Pt-300To470_PU200
+- +path_to_input_dir=/afs/cern.ch/work/s/snandan/public/TauML/QCD_Pt-300To470_PU200/
+- +input_filename=eventTuple_1

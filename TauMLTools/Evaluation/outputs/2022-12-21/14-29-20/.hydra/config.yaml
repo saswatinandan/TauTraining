@@ -1,0 +1,104 @@
+plot_ratio: true
+plot_setup: ${.plot_setup_map.${vs_type}}
+plot_setup_map:
+  e:
+    _target_: plot_roc.PlotSetup
+    tick_size: 14
+    xlim:
+    - 0.5
+    - 1
+    ylabel: Electron mis-id probability
+    ylabel_size: 16
+    yscale: log
+    ylim:
+    - 2.0e-05
+    - 1
+    ratio_xlabel_size: 16
+    ratio_yscale: log
+    ratio_ylim:
+    - 0.2
+    - 2
+    ratio_ylabel: Ratio
+    ratio_ylabel_size: 16
+    ratio_ylabel_pad: 10
+    ratio_tick_size: 12
+    legend_loc: upper left
+    legend_fontsize: 14
+  mu:
+    _target_: plot_roc.PlotSetup
+    tick_size: 14
+    xlim:
+    - 0.98
+    - 1
+    ylabel: Muon mis-id probability
+    ylabel_size: 16
+    yscale: log
+    ylim:
+    - 2.0e-05
+    - 1
+    ratio_xlabel_size: 16
+    ratio_yscale: log
+    ratio_ylim:
+    - 0.5
+    - 2
+    ratio_ylabel: Ratio
+    ratio_ylabel_size: 16
+    ratio_ylabel_pad: 10
+    ratio_tick_size: 12
+    legend_loc: upper left
+    legend_fontsize: 14
+  jet:
+    _target_: plot_roc.PlotSetup
+    tick_size: 14
+    xlim:
+    - 0.3
+    - 1
+    ylabel: Jet mis-id probability
+    ylabel_size: 16
+    yscale: log
+    ylim:
+    - 0.0002
+    - 1
+    ratio_xlabel_size: 16
+    ratio_yscale: linear
+    ratio_ylim:
+    - 0.5
+    - 1.1
+    ratio_ylabel: Ratio
+    ratio_ylabel_size: 16
+    ratio_ylabel_pad: 17
+    ratio_tick_size: 12
+    legend_loc: upper left
+    legend_fontsize: 14
+path_to_mlflow: ../Training/python/mlruns
+experiment_id: 2
+discriminators:
+  67180788063d47e0ab5d4fd814704a1f:
+    name: DeepTau (v2.1)
+    curve_types:
+    - roc_curve
+    plot_cfg:
+      color: grey
+      dashed: false
+      alpha: 1.0
+      dots_only: false
+      with_errors: true
+reference:
+  67180788063d47e0ab5d4fd814704a1f: roc_curve
+period: null
+vs_type: jet
+dataset_alias: jet
+pt_bin:
+- 20
+- 100
+eta_bin:
+- 0
+- 2.5
+dm_bin:
+- 0
+- 1
+- 2
+- 10
+- 11
+output_dir: plots/test
+output_name: vs_${vs_type}_${dataset_alias}_pt_${pt_bin[0]}_${pt_bin[1]}_eta_${eta_bin[0]}_${eta_bin[1]}_dm_

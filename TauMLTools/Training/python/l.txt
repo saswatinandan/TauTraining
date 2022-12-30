@@ -1,0 +1,56 @@
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../../Analysis/interface/TauTuple.h
+#	deleted:    ../../Analysis/law/ShuffleMergeSpectral/__init__.py
+#	deleted:    ../../Analysis/law/ShuffleMergeSpectral/tasks.py
+#	modified:   ../../Evaluation/apply_training.py
+#	modified:   ../../Evaluation/configs/apply_training.yaml
+#	modified:   ../../Evaluation/configs/eval/discriminator/DeepTau_run3.yaml
+#	modified:   ../../Evaluation/configs/eval/run3.yaml
+#	modified:   ../../Evaluation/configs/plot_roc.yaml
+#	modified:   ../../Production/plugins/TauTupleProducer.cc
+#	modified:   ../../Production/python/Production.py
+#	modified:   ../../Production/python/sampleConfig.py
+#	modified:   ../configs/training_v1.yaml
+#	modified:   ../interface/DataLoader_main.h
+#	modified:   train.yaml
+#	modified:   ../../env.sh
+#	modified:   ../../tau-ml-env.yaml
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../../Analysis/config/2018/training_inputs_MC_training_samples_QCD.cfg
+#	../../Analysis/config/2018/training_inputs_MC_training_samples_QCD.cfg~
+#	../../Analysis/law/output_dir/
+#	../../Analysis/law/output_dir_2/
+#	../../Analysis/law/output_spectrum_file.root
+#	../../Analysis/law/output_spectrum_file_2.root
+#	../../Evaluation/error.txt
+#	../../Evaluation/l.txt
+#	../../Evaluation/l.txt~
+#	../../Evaluation/l1.txt
+#	../../Evaluation/out.txt
+#	../../Evaluation/outputs/
+#	../../ShuffleMergeSpectral.cxx
+#	l.txt
+#	l.txt~
+#	l1.txt
+#	l2.txt
+#	mlruns/
+#	outputs/
+#	../../filelist_mix.txt
+#	../../l.txt
+#	../../l.txt~
+#	../../l1.txt
+#	../../mlruns/
+#	../../out/
+#	../../output.root
+#	../../outputs/
+#	../../scaling/
+#	../../scaling_2/
+#	../../tmp_lx/
+no changes added to commit (use "git add" and/or "git commit -a")

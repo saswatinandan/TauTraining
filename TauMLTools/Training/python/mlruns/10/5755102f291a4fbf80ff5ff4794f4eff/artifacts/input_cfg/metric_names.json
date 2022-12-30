@@ -1,0 +1,23 @@
+{
+  "accuracy": "",
+  "tau_crossentropy": "",
+  "tau_crossentropy_v2": "",
+  "Le": "",
+  "Lmu": "",
+  "Ljet": "",
+  "He": "",
+  "Hmu": "",
+  "Htau": "",
+  "Hjet": "",
+  "Hcat_e": "",
+  "Hcat_mu": "",
+  "Hcat_jet": "",
+  "Hbin": "",
+  "Hcat_eInv": "",
+  "Hcat_muInv": "",
+  "Hcat_jetInv": "",
+  "Fe": "",
+  "Fmu": "",
+  "Fjet": "",
+  "Fcmb": ""
+}

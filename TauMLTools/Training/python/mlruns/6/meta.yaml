@@ -1,0 +1,4 @@
+artifact_location: file:///afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/6
+experiment_id: '6'
+lifecycle_stage: active
+name: correct_salingfile_withtime

@@ -1,0 +1,9 @@
+- path_to_mlflow=../Training/python/mlruns/
+- experiment_id=7
+- run_id=0e9cf7f456054f0bb1644337da692f4b
+- discriminator=DeepTau_run3
+- path_to_input=null
+- path_to_pred="${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5"
+- path_to_target="${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5"
+- vs_type=jet
+- dataset_alias=QCD

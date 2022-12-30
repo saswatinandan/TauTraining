@@ -1,0 +1,35 @@
+
+*******reference_json  /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Evaluation/../Training/python/mlruns/1/cb73d758436d482ab4ecc9466ee1dcc9/artifacts/performance.json
+******filter_func  <function select_curve.<locals>.<lambda> at 0x7feac3b973a0>
+********x[k]  True 	 pt_min 	 20
+********x[k]  True 	 pt_max 	 100
+********x[k]  True 	 eta_min 	 0
+********x[k]  True 	 eta_max 	 2.5
+********x[k]  True 	 dm_bin 	 [0, 1, 2, 10, 11]
+********x[k]  True 	 vs_type 	 jet
+********x[k]  True 	 dataset_alias 	 QCD
+********x[k]  False 	 pt_min 	 20
+********x[k]  False 	 pt_max 	 100
+********x[k]  True 	 eta_min 	 0
+********x[k]  True 	 eta_max 	 2.5
+********x[k]  True 	 dm_bin 	 [0, 1, 2, 10, 11]
+********x[k]  True 	 vs_type 	 jet
+********x[k]  True 	 dataset_alias 	 QCD
+******filter_func  <function select_curve.<locals>.<lambda> at 0x7feac3b97310>
+********x[k]  True 	 pt_min 	 20
+********x[k]  True 	 pt_max 	 100
+********x[k]  True 	 eta_min 	 0
+********x[k]  True 	 eta_max 	 2.5
+********x[k]  True 	 dm_bin 	 [0, 1, 2, 10, 11]
+********x[k]  True 	 vs_type 	 jet
+********x[k]  True 	 dataset_alias 	 QCD
+********x[k]  False 	 pt_min 	 20
+********x[k]  False 	 pt_max 	 100
+********x[k]  True 	 eta_min 	 0
+********x[k]  True 	 eta_max 	 2.5
+********x[k]  True 	 dm_bin 	 [0, 1, 2, 10, 11]
+********x[k]  True 	 vs_type 	 jet
+********x[k]  True 	 dataset_alias 	 QCD
+
+    Saved the plot in artifacts/plots/test for runID=cb73d758436d482ab4ecc9466ee1dcc9
+

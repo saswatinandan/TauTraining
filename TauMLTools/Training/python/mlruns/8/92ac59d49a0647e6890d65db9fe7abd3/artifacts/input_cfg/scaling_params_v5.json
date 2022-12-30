@@ -1,0 +1,3300 @@
+{
+    "TauFlat": {
+        "rho": {
+            "global": {
+                "mean": 25.0,
+                "std": 25.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_pt": {
+            "global": {
+                "mean": 510.0,
+                "std": 490.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_eta": {
+            "global": {
+                "mean": 0.0,
+                "std": 2.3,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_phi": {
+            "global": {
+                "mean": 0.0,
+                "std": 3.141592653589793,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_mass": {
+            "global": {
+                "mean": 0.9126,
+                "std": 0.4969,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.08,
+                "num": 993208
+            }
+        },
+        "tau_E_over_pt": {
+            "global": {
+                "mean": 1.81,
+                "std": 1.06,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 4.4,
+                "num": 993208
+            }
+        },
+        "tau_charge": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_n_charged_prongs": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_n_neutral_prongs": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_chargedIsoPtSum": {
+            "global": {
+                "mean": 44.94,
+                "std": 77.07,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 7959.0,
+                "num": 993208
+            }
+        },
+        "tau_chargedIsoPtSumdR03_over_dR05": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_footprintCorrection": {
+            "global": {
+                "mean": 5.072,
+                "std": 12.41,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 179.8,
+                "num": 993208
+            }
+        },
+        "tau_neutralIsoPtSum": {
+            "global": {
+                "mean": 38.0,
+                "std": 69.04,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6211.0,
+                "num": 993208
+            }
+        },
+        "tau_neutralIsoPtSumWeight_over_neutralIsoPtSum": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_neutralIsoPtSumWeightdR03_over_neutralIsoPtSum": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_neutralIsoPtSumdR03_over_dR05": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_photonPtSumOutsideSignalCone": {
+            "global": {
+                "mean": 1.049,
+                "std": 3.497,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 13.33,
+                "num": 993208
+            }
+        },
+        "tau_puCorrPtSum": {
+            "global": {
+                "mean": 147.2,
+                "std": 39.08,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 23190.0,
+                "num": 993208
+            }
+        },
+        "tau_dxy_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_dxy": {
+            "global": {
+                "mean": 0.0005983,
+                "std": 0.006563,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 4.344e-05,
+                "num": 990315
+            }
+        },
+        "tau_dxy_sig": {
+            "global": {
+                "mean": 2.057,
+                "std": 5.569,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 35.25,
+                "num": 990315
+            }
+        },
+        "tau_ip3d_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_ip3d": {
+            "global": {
+                "mean": 0.0007802,
+                "std": 0.008068,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6.57e-05,
+                "num": 990315
+            }
+        },
+        "tau_ip3d_sig": {
+            "global": {
+                "mean": 2.428,
+                "std": 5.259,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 33.55,
+                "num": 990315
+            }
+        },
+        "tau_dz": {
+            "global": {
+                "mean": 0.001827,
+                "std": 1.413,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.997,
+                "num": 993208
+            }
+        },
+        "tau_dz_sig_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_dz_sig": {
+            "global": {
+                "mean": 171.1,
+                "std": 1039.0,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1108000.0,
+                "num": 990315
+            }
+        },
+        "tau_flightLength_x": {
+            "global": {
+                "mean": 0.0004294,
+                "std": 0.2752,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.07572,
+                "num": 993208
+            }
+        },
+        "tau_flightLength_y": {
+            "global": {
+                "mean": 6.924e-05,
+                "std": 0.2855,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.08152,
+                "num": 993208
+            }
+        },
+        "tau_flightLength_z": {
+            "global": {
+                "mean": -0.0007032,
+                "std": 0.9135,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.8345,
+                "num": 993208
+            }
+        },
+        "tau_flightLength_sig": {
+            "global": {
+                "mean": -2.173,
+                "std": 12.48,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 160.5,
+                "num": 993208
+            }
+        },
+        "tau_pt_weighted_deta_strip": {
+            "global": {
+                "mean": 0.5,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_pt_weighted_dphi_strip": {
+            "global": {
+                "mean": 0.5,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_pt_weighted_dr_signal": {
+            "global": {
+                "mean": 0.01528,
+                "std": 0.02398,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0008083,
+                "num": 993208
+            }
+        },
+        "tau_pt_weighted_dr_iso": {
+            "global": {
+                "mean": 0.5,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_leadingTrackNormChi2": {
+            "global": {
+                "mean": 0.9998,
+                "std": 0.5591,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.312,
+                "num": 993208
+            }
+        },
+        "tau_e_ratio_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_e_ratio": {
+            "global": {
+                "mean": 0.5,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_gj_angle_diff_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_gj_angle_diff": {
+            "global": {
+                "mean": 1.5707963267948966,
+                "std": 1.5707963267948966,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_n_photons": {
+            "global": {
+                "mean": 8.432,
+                "std": 4.843,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 94.55,
+                "num": 993208
+            }
+        },
+        "tau_emFraction": {
+            "global": {
+                "mean": 0.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_inside_ecal_crack": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_leadChargedCand_etaAtEcalEntrance_minus_tau_eta": {
+            "global": {
+                "mean": -0.0005238,
+                "std": 0.847,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.7174,
+                "num": 993208
+            }
+        }
+    },
+    "GridGlobal": {
+        "rho": {
+            "global": {
+                "mean": 25.0,
+                "std": 25.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_pt": {
+            "global": {
+                "mean": 510.0,
+                "std": 490.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_eta": {
+            "global": {
+                "mean": 0.0,
+                "std": 2.3,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "tau_inside_ecal_crack": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        }
+    },
+    "PfCand_electron": {
+        "pfCand_ele_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_rel_pt": {
+            "inner": {
+                "mean": 0.7393,
+                "std": 0.7113,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.053,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 0.0894,
+                "std": 0.3866,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1574,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_pvAssociationQuality": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_puppiWeight": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_charge": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_lostInnerHits": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_nPixelHits": {
+            "global": {
+                "mean": 5.0,
+                "std": 5.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_vertex_dx": {
+            "inner": {
+                "mean": -3.103e-05,
+                "std": 0.01348,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0001816,
+                "num": 77654
+            },
+            "outer": {
+                "mean": -0.0001633,
+                "std": 0.03246,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.001054,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dy": {
+            "inner": {
+                "mean": -2.562e-05,
+                "std": 0.01308,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.000171,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 6.521e-05,
+                "std": 0.03356,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.001126,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dz": {
+            "inner": {
+                "mean": -0.003789,
+                "std": 1.752,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 3.068,
+                "num": 77654
+            },
+            "outer": {
+                "mean": -0.000622,
+                "std": 5.068,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 25.69,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dt": {
+            "inner": {
+                "mean": 0.001763,
+                "std": 0.1842,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03394,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 0.001329,
+                "std": 0.1846,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03407,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dx_tauFL": {
+            "inner": {
+                "mean": -0.0005765,
+                "std": 0.2893,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.08368,
+                "num": 77654
+            },
+            "outer": {
+                "mean": -0.0009757,
+                "std": 0.3435,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.118,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dy_tauFL": {
+            "inner": {
+                "mean": -0.000291,
+                "std": 0.3273,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1071,
+                "num": 77654
+            },
+            "outer": {
+                "mean": -0.0006203,
+                "std": 0.3535,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1249,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_vertex_dz_tauFL": {
+            "inner": {
+                "mean": -0.004804,
+                "std": 2.047,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 4.191,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 0.004063,
+                "std": 5.252,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 27.58,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_hasTrackDetails": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_ele_dxy": {
+            "inner": {
+                "mean": -9.392e-05,
+                "std": 0.01837,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0003376,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 8.921e-06,
+                "std": 0.04654,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.002166,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_dxy_sig": {
+            "inner": {
+                "mean": 2.168,
+                "std": 5.814,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 38.5,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 2.307,
+                "std": 7.9,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 67.74,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_dz": {
+            "inner": {
+                "mean": -0.004628,
+                "std": 1.721,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.963,
+                "num": 77654
+            },
+            "outer": {
+                "mean": -0.0003912,
+                "std": 5.066,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 25.66,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_dz_sig": {
+            "inner": {
+                "mean": 179.3,
+                "std": 1027.0,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1086000.0,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 724.0,
+                "std": 1017.0,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1559000.0,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_time": {
+            "inner": {
+                "mean": -0.0003173,
+                "std": 0.1694,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0287,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 0.001042,
+                "std": 0.1585,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.02512,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_time_sig": {
+            "inner": {
+                "mean": 4.446,
+                "std": 5.513,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 50.16,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 3.217,
+                "std": 4.165,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 27.7,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_track_chi2_ndof": {
+            "inner": {
+                "mean": 1.097,
+                "std": 4.889,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 25.1,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 0.8996,
+                "std": 2.366,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6.406,
+                "num": 142250
+            }
+        },
+        "pfCand_ele_track_ndof": {
+            "inner": {
+                "mean": 11.16,
+                "std": 5.949,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 159.9,
+                "num": 77654
+            },
+            "outer": {
+                "mean": 18.12,
+                "std": 7.658,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 387.0,
+                "num": 142250
+            }
+        }
+    },
+    "PfCand_muon": {
+        "pfCand_muon_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_rel_pt": {
+            "inner": {
+                "mean": 0.8997,
+                "std": 0.3005,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.8997,
+                "num": 139543
+            },
+            "outer": {
+                "mean": 0.05542,
+                "std": 0.1763,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03416,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_pvAssociationQuality": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_fromPV": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_puppiWeight": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_charge": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_lostInnerHits": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_nPixelHits": {
+            "global": {
+                "mean": 5.5,
+                "std": 5.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_vertex_dx": {
+            "inner": {
+                "mean": 1.091e-05,
+                "std": 0.02795,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0007811,
+                "num": 139543
+            },
+            "outer": {
+                "mean": -5.597e-05,
+                "std": 0.07412,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.005494,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dy": {
+            "inner": {
+                "mean": -2.819e-05,
+                "std": 0.02758,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0007608,
+                "num": 139543
+            },
+            "outer": {
+                "mean": -1.303e-05,
+                "std": 0.06775,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.00459,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dz": {
+            "inner": {
+                "mean": -0.01139,
+                "std": 1.597,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.551,
+                "num": 139543
+            },
+            "outer": {
+                "mean": 0.02621,
+                "std": 6.017,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 36.21,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dt": {
+            "inner": {
+                "mean": -2.282e-05,
+                "std": 0.1842,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03392,
+                "num": 139543
+            },
+            "outer": {
+                "mean": 0.002136,
+                "std": 0.1848,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03414,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dx_tauFL": {
+            "inner": {
+                "mean": -0.0009745,
+                "std": 0.2126,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.04522,
+                "num": 139543
+            },
+            "outer": {
+                "mean": 0.0004666,
+                "std": 0.347,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1204,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dy_tauFL": {
+            "inner": {
+                "mean": -0.001074,
+                "std": 0.2096,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.04391,
+                "num": 139543
+            },
+            "outer": {
+                "mean": -0.0002556,
+                "std": 0.3601,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1297,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_vertex_dz_tauFL": {
+            "inner": {
+                "mean": -0.01221,
+                "std": 1.69,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.856,
+                "num": 139543
+            },
+            "outer": {
+                "mean": 0.03306,
+                "std": 6.201,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 38.45,
+                "num": 214517
+            }
+        },
+        "pfCand_muon_hasTrackDetails": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_muon_dxy": {
+            "inner": {
+                "mean": -1.2e-06,
+                "std": 0.03925,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.001541,
+                "num": 139542
+            },
+            "outer": {
+                "mean": -0.000135,
+                "std": 0.1002,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.01003,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_dxy_sig": {
+            "inner": {
+                "mean": 3.137,
+                "std": 26.2,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 696.4,
+                "num": 139542
+            },
+            "outer": {
+                "mean": 4.789,
+                "std": 31.25,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 999.5,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_dz": {
+            "inner": {
+                "mean": -0.0128,
+                "std": 1.584,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.51,
+                "num": 139542
+            },
+            "outer": {
+                "mean": 0.02404,
+                "std": 6.016,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 36.2,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_dz_sig": {
+            "inner": {
+                "mean": 111.4,
+                "std": 901.2,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 824600.0,
+                "num": 139542
+            },
+            "outer": {
+                "mean": 640.8,
+                "std": 860.3,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1151000.0,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_time": {
+            "inner": {
+                "mean": 0.004735,
+                "std": 0.1789,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03203,
+                "num": 139542
+            },
+            "outer": {
+                "mean": -0.002192,
+                "std": 0.1688,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.02848,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_time_sig": {
+            "inner": {
+                "mean": 3.757,
+                "std": 4.108,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 30.99,
+                "num": 139542
+            },
+            "outer": {
+                "mean": 3.524,
+                "std": 4.341,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 31.26,
+                "num": 214480
+            }
+        },
+        "pfCand_muon_track_chi2_ndof": {
+            "inner": {
+                "mean": 0.3824,
+                "std": 0.8229,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.8234,
+                "num": 139517
+            },
+            "outer": {
+                "mean": 0.7744,
+                "std": 0.9626,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.526,
+                "num": 214377
+            }
+        },
+        "pfCand_muon_track_ndof": {
+            "inner": {
+                "mean": 17.71,
+                "std": 4.804,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 336.9,
+                "num": 139517
+            },
+            "outer": {
+                "mean": 21.1,
+                "std": 5.797,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 478.8,
+                "num": 214377
+            }
+        }
+    },
+    "PfCand_chHad": {
+        "pfCand_chHad_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_rel_pt": {
+            "inner": {
+                "mean": 0.1712,
+                "std": 0.2918,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1144,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 0.02356,
+                "std": 0.05739,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.003849,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_tauLeadChargedHadrCand": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_pvAssociationQuality": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_fromPV": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_puppiWeight": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_puppiWeightNoLep": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_charge": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_lostInnerHits": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_nPixelHits": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_vertex_dx": {
+            "inner": {
+                "mean": 1.577e-05,
+                "std": 0.033,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.001089,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 6.372e-06,
+                "std": 0.04735,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.002242,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dy": {
+            "inner": {
+                "mean": -5.319e-06,
+                "std": 0.03271,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.00107,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": -2.839e-06,
+                "std": 0.04704,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.002213,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dz": {
+            "inner": {
+                "mean": -0.004542,
+                "std": 3.953,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 15.62,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": -0.001609,
+                "std": 5.906,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 34.88,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dt": {
+            "inner": {
+                "mean": 0.002052,
+                "std": 0.185,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03422,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 0.001737,
+                "std": 0.1846,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03408,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dx_tauFL": {
+            "inner": {
+                "mean": -0.0003233,
+                "std": 0.2926,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.08559,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": -0.0004242,
+                "std": 0.2881,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.08302,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dy_tauFL": {
+            "inner": {
+                "mean": 0.0004625,
+                "std": 0.3056,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.09338,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 2.528e-05,
+                "std": 0.2996,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.08974,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_vertex_dz_tauFL": {
+            "inner": {
+                "mean": -0.004153,
+                "std": 4.074,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 16.59,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": -0.0006276,
+                "std": 5.989,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 35.87,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_hasTrackDetails": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_dxy": {
+            "inner": {
+                "mean": 0.0002116,
+                "std": 0.04623,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.002137,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 0.0005376,
+                "std": 0.06654,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.004428,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_dxy_sig": {
+            "inner": {
+                "mean": 2.07,
+                "std": 6.523,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 46.83,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 1.747,
+                "std": 5.068,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 28.74,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_dz": {
+            "inner": {
+                "mean": -0.005512,
+                "std": 3.941,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 15.53,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": -0.002299,
+                "std": 5.903,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 34.85,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_dz_sig": {
+            "inner": {
+                "mean": 261.3,
+                "std": 676.6,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 526100.0,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 505.4,
+                "std": 615.9,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 634700.0,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_time": {
+            "inner": {
+                "mean": 0.004296,
+                "std": 0.1669,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.02788,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 0.00316,
+                "std": 0.1548,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.02397,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_time_sig": {
+            "inner": {
+                "mean": 3.287,
+                "std": 5.337,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 39.29,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 1.948,
+                "std": 4.845,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 27.26,
+                "num": 93265028
+            }
+        },
+        "pfCand_chHad_track_chi2_ndof": {
+            "inner": {
+                "mean": 0.5401,
+                "std": 0.8424,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.001,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 0.6422,
+                "std": 0.9475,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.31,
+                "num": 93265024
+            }
+        },
+        "pfCand_chHad_track_ndof": {
+            "inner": {
+                "mean": 15.47,
+                "std": 5.794,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 273.0,
+                "num": 5284688
+            },
+            "outer": {
+                "mean": 14.58,
+                "std": 6.384,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 253.5,
+                "num": 93265024
+            }
+        },
+        "pfCand_chHad_hcalFraction": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_chHad_rawCaloFraction": {
+            "global": {
+                "mean": 1.3,
+                "std": 1.3,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        }
+    },
+    "PfCand_nHad": {
+        "pfCand_nHad_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_nHad_rel_pt": {
+            "inner": {
+                "mean": 0.5567,
+                "std": 0.3977,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.4681,
+                "num": 288687
+            },
+            "outer": {
+                "mean": 0.3607,
+                "std": 0.3532,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.2549,
+                "num": 11805021
+            }
+        },
+        "pfCand_nHad_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_nHad_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_nHad_puppiWeight": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_nHad_puppiWeightNoLep": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_nHad_hcalFraction": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        }
+    },
+    "PfCand_gamma": {
+        "pfCand_gamma_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_rel_pt": {
+            "inner": {
+                "mean": 0.2442,
+                "std": 0.5248,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.335,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 0.02771,
+                "std": 0.1081,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.01245,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_pvAssociationQuality": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_fromPV": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_puppiWeight": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_puppiWeightNoLep": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_lostInnerHits": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_nPixelHits": {
+            "global": {
+                "mean": 3.5,
+                "std": 3.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_vertex_dx": {
+            "inner": {
+                "mean": 2.291e-07,
+                "std": 0.002633,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6.935e-06,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 4.028e-06,
+                "std": 0.002536,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6.43e-06,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dy": {
+            "inner": {
+                "mean": -5.389e-08,
+                "std": 0.003317,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.1e-05,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": -7.565e-07,
+                "std": 0.003261,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.064e-05,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dz": {
+            "inner": {
+                "mean": 0.002915,
+                "std": 0.8906,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.7932,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 0.0006167,
+                "std": 0.7604,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.5782,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dt": {
+            "inner": {
+                "mean": 0.001664,
+                "std": 0.1839,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03382,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 0.001849,
+                "std": 0.1848,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03415,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dx_tauFL": {
+            "inner": {
+                "mean": -0.0004429,
+                "std": 0.2457,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.06038,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": -0.0007499,
+                "std": 0.282,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.07952,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dy_tauFL": {
+            "inner": {
+                "mean": -0.0001911,
+                "std": 0.2484,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0617,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 0.0004075,
+                "std": 0.2921,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0853,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_vertex_dz_tauFL": {
+            "inner": {
+                "mean": 0.00341,
+                "std": 1.151,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.325,
+                "num": 1604514
+            },
+            "outer": {
+                "mean": 0.0008208,
+                "std": 1.238,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.533,
+                "num": 23753388
+            }
+        },
+        "pfCand_gamma_hasTrackDetails": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "pfCand_gamma_dxy": {
+            "inner": {
+                "mean": -0.01399,
+                "std": 0.02467,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0008042,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_dxy_sig": {
+            "inner": {
+                "mean": 5.474,
+                "std": 5.318,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 58.25,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_dz": {
+            "inner": {
+                "mean": 2.57,
+                "std": 7.406,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 61.45,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_dz_sig": {
+            "inner": {
+                "mean": 2415.0,
+                "std": 3480.0,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 17940000.0,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_time": {
+            "inner": {
+                "mean": 0.0002756,
+                "std": 0.1777,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.03157,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_time_sig": {
+            "inner": {
+                "mean": 2.844,
+                "std": 5.847,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 42.27,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_track_chi2_ndof": {
+            "inner": {
+                "mean": 9.667,
+                "std": 11.31,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 221.4,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        },
+        "pfCand_gamma_track_ndof": {
+            "inner": {
+                "mean": 7.556,
+                "std": 1.165,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 58.44,
+                "num": 9
+            },
+            "outer": {
+                "mean": null,
+                "std": null,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": null,
+                "num": 1
+            }
+        }
+    },
+    "Electron": {
+        "ele_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_rel_pt": {
+            "inner": {
+                "mean": 0.9254,
+                "std": 1.281,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.497,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 0.4382,
+                "std": 1.297,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.873,
+                "num": 127274
+            }
+        },
+        "ele_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_cc_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_cc_ele_rel_energy": {
+            "inner": {
+                "mean": 1.113,
+                "std": 0.5061,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.496,
+                "num": 136966
+            },
+            "outer": {
+                "mean": 0.955,
+                "std": 0.7193,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.429,
+                "num": 54647
+            }
+        },
+        "ele_cc_gamma_rel_energy": {
+            "inner": {
+                "mean": 0.1896,
+                "std": 0.3513,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1594,
+                "num": 136966
+            },
+            "outer": {
+                "mean": 0.1827,
+                "std": 0.3977,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1915,
+                "num": 54647
+            }
+        },
+        "ele_cc_n_gamma": {
+            "inner": {
+                "mean": 2.272,
+                "std": 2.103,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 9.587,
+                "num": 136966
+            },
+            "outer": {
+                "mean": 1.118,
+                "std": 2.012,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 5.299,
+                "num": 54647
+            }
+        },
+        "ele_rel_trackMomentumAtVtx": {
+            "inner": {
+                "mean": 2.217,
+                "std": 31.99,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1028.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.977,
+                "std": 232.5,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 54050.0,
+                "num": 127274
+            }
+        },
+        "ele_rel_trackMomentumAtCalo": {
+            "inner": {
+                "mean": 2.217,
+                "std": 31.99,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1028.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.977,
+                "std": 232.5,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 54050.0,
+                "num": 127274
+            }
+        },
+        "ele_rel_trackMomentumOut": {
+            "inner": {
+                "mean": 2.333,
+                "std": 122.4,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 15000.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.499,
+                "std": 277.4,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 76930.0,
+                "num": 127274
+            }
+        },
+        "ele_rel_trackMomentumAtEleClus": {
+            "inner": {
+                "mean": 2.333,
+                "std": 122.4,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 15000.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.499,
+                "std": 277.4,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 76930.0,
+                "num": 127274
+            }
+        },
+        "ele_rel_trackMomentumAtVtxWithConstraint": {
+            "inner": {
+                "mean": 2.044,
+                "std": 10.38,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 112.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 1.598,
+                "std": 9.49,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 92.61,
+                "num": 127274
+            }
+        },
+        "ele_rel_ecalEnergy": {
+            "inner": {
+                "mean": 2.441,
+                "std": 1.408,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 7.94,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.537,
+                "std": 1.727,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 9.417,
+                "num": 127274
+            }
+        },
+        "ele_ecalEnergy_sig": {
+            "inner": {
+                "mean": 19.43,
+                "std": 13.87,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 569.9,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 12.21,
+                "std": 8.763,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 226.0,
+                "num": 127274
+            }
+        },
+        "ele_eSuperClusterOverP": {
+            "inner": {
+                "mean": 2.028,
+                "std": 3.633,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 17.31,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.284,
+                "std": 5.772,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 38.53,
+                "num": 127274
+            }
+        },
+        "ele_eSeedClusterOverP": {
+            "inner": {
+                "mean": 1.324,
+                "std": 2.486,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 7.935,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 1.341,
+                "std": 4.135,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 18.9,
+                "num": 127274
+            }
+        },
+        "ele_eSeedClusterOverPout": {
+            "inner": {
+                "mean": 2.154,
+                "std": 4.868,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 28.33,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 2.205,
+                "std": 6.477,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 46.81,
+                "num": 127274
+            }
+        },
+        "ele_eEleClusterOverPout": {
+            "inner": {
+                "mean": 1.556,
+                "std": 3.211,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 12.73,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 1.483,
+                "std": 4.655,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 23.87,
+                "num": 127274
+            }
+        },
+        "ele_deltaEtaSuperClusterTrackAtVtx": {
+            "inner": {
+                "mean": 1.97e-05,
+                "std": 0.01734,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0003008,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -1.594e-05,
+                "std": 0.02833,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0008026,
+                "num": 127274
+            }
+        },
+        "ele_deltaEtaSeedClusterTrackAtCalo": {
+            "inner": {
+                "mean": -3.227e-06,
+                "std": 0.01743,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0003038,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -0.000111,
+                "std": 0.02857,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0008162,
+                "num": 127274
+            }
+        },
+        "ele_deltaEtaEleClusterTrackAtCalo": {
+            "inner": {
+                "mean": 1.542e-05,
+                "std": 0.01778,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0003163,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -3.086e-05,
+                "std": 0.0288,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0008292,
+                "num": 127274
+            }
+        },
+        "ele_deltaPhiEleClusterTrackAtCalo": {
+            "inner": {
+                "mean": -4.498e-05,
+                "std": 0.04016,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.001613,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -2.258e-05,
+                "std": 0.07935,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.006296,
+                "num": 127274
+            }
+        },
+        "ele_deltaPhiSuperClusterTrackAtVtx": {
+            "inner": {
+                "mean": -9.47e-05,
+                "std": 0.04808,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.002312,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -4.611e-06,
+                "std": 0.09432,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.008897,
+                "num": 127274
+            }
+        },
+        "ele_deltaPhiSeedClusterTrackAtCalo": {
+            "inner": {
+                "mean": -9.614e-05,
+                "std": 0.06039,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.003647,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -0.0001544,
+                "std": 0.11,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.0121,
+                "num": 127274
+            }
+        },
+        "ele_mvaInput_earlyBrem": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_mvaInput_lateBrem": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_mvaInput_sigmaEtaEta": {
+            "inner": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 127274
+            }
+        },
+        "ele_mvaInput_hadEnergy": {
+            "inner": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 127274
+            }
+        },
+        "ele_mvaInput_deltaEta": {
+            "inner": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 237367
+            },
+            "outer": {
+                "mean": -Infinity,
+                "std": NaN,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": Infinity,
+                "num": 127274
+            }
+        },
+        "ele_gsfTrack_normalizedChi2": {
+            "inner": {
+                "mean": 8.604,
+                "std": 58.52,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 3499.0,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 25.45,
+                "std": 179.2,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 32740.0,
+                "num": 127274
+            }
+        },
+        "ele_gsfTrack_numberOfValidHits": {
+            "inner": {
+                "mean": 9.95,
+                "std": 1.202,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 100.4,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 9.405,
+                "std": 1.235,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 89.97,
+                "num": 127274
+            }
+        },
+        "ele_rel_gsfTrack_pt": {
+            "inner": {
+                "mean": 1.278,
+                "std": 13.7,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 189.4,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 1.899,
+                "std": 50.35,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2539.0,
+                "num": 127274
+            }
+        },
+        "ele_gsfTrack_pt_sig": {
+            "inner": {
+                "mean": 6.137,
+                "std": 2.858,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 45.83,
+                "num": 237367
+            },
+            "outer": {
+                "mean": 7.172,
+                "std": 4.568,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 72.31,
+                "num": 127274
+            }
+        },
+        "ele_has_closestCtfTrack": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "ele_closestCtfTrack_normalizedChi2": {
+            "inner": {
+                "mean": 1.196,
+                "std": 0.777,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.035,
+                "num": 226343
+            },
+            "outer": {
+                "mean": 1.188,
+                "std": 0.7812,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2.022,
+                "num": 107499
+            }
+        },
+        "ele_closestCtfTrack_numberOfValidHits": {
+            "inner": {
+                "mean": 15.83,
+                "std": 5.781,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 283.9,
+                "num": 226343
+            },
+            "outer": {
+                "mean": 14.4,
+                "std": 6.664,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 251.8,
+                "num": 107499
+            }
+        }
+    },
+    "Muon": {
+        "muon_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_rel_pt": {
+            "inner": {
+                "mean": 0.7123,
+                "std": 13.03,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 170.4,
+                "num": 337063
+            },
+            "outer": {
+                "mean": 0.1437,
+                "std": 2.637,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 6.975,
+                "num": 450997
+            }
+        },
+        "muon_deta": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_dphi": {
+            "inner": {
+                "mean": 0.0,
+                "std": 0.1,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            },
+            "outer": {
+                "mean": 0.0,
+                "std": 0.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_dxy": {
+            "inner": {
+                "mean": 0.0001855,
+                "std": 0.2478,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.06138,
+                "num": 337063
+            },
+            "outer": {
+                "mean": 0.0002214,
+                "std": 0.3463,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 0.1199,
+                "num": 450997
+            }
+        },
+        "muon_dxy_sig": {
+            "inner": {
+                "mean": 18.93,
+                "std": 98.82,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 10120.0,
+                "num": 337063
+            },
+            "outer": {
+                "mean": 7.792,
+                "std": 50.93,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 2654.0,
+                "num": 450997
+            }
+        },
+        "muon_normalizedChi2_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_normalizedChi2": {
+            "inner": {
+                "mean": 13.6,
+                "std": 185.3,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 34510.0,
+                "num": 152821
+            },
+            "outer": {
+                "mean": 37.47,
+                "std": 292.0,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 86680.0,
+                "num": 62026
+            }
+        },
+        "muon_numberOfValidHits": {
+            "inner": {
+                "mean": 17.97,
+                "std": 4.074,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 339.5,
+                "num": 152821
+            },
+            "outer": {
+                "mean": 17.17,
+                "std": 5.452,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 324.6,
+                "num": 62026
+            }
+        },
+        "muon_segmentCompatibility": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_caloCompatibility": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_pfEcalEnergy_valid": {
+            "global": {
+                "mean": 0,
+                "std": 1,
+                "lim_min": "-inf",
+                "lim_max": "inf",
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_rel_pfEcalEnergy": {
+            "inner": {
+                "mean": 0.2546,
+                "std": 1.026,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 1.118,
+                "num": 208665
+            },
+            "outer": {
+                "mean": 1.433,
+                "std": 5.06,
+                "lim_min": -5,
+                "lim_max": 5,
+                "sqmean": 27.66,
+                "num": 285356
+            }
+        },
+        "muon_n_matches_DT_1": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_DT_2": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_DT_3": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_DT_4": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_CSC_1": {
+            "global": {
+                "mean": 3.0,
+                "std": 3.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_CSC_2": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_CSC_3": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_CSC_4": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_RPC_1": {
+            "global": {
+                "mean": 3.5,
+                "std": 3.5,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_RPC_2": {
+            "global": {
+                "mean": 3.0,
+                "std": 3.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_RPC_3": {
+            "global": {
+                "mean": 2.0,
+                "std": 2.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_matches_RPC_4": {
+            "global": {
+                "mean": 2.0,
+                "std": 2.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_DT_1": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_DT_2": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_DT_3": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_DT_4": {
+            "global": {
+                "mean": 4.0,
+                "std": 4.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_CSC_1": {
+            "global": {
+                "mean": 12.0,
+                "std": 12.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_CSC_2": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_CSC_3": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_CSC_4": {
+            "global": {
+                "mean": 6.0,
+                "std": 6.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_RPC_1": {
+            "global": {
+                "mean": 2.0,
+                "std": 2.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_RPC_2": {
+            "global": {
+                "mean": 2.0,
+                "std": 2.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_RPC_3": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        },
+        "muon_n_hits_RPC_4": {
+            "global": {
+                "mean": 1.0,
+                "std": 1.0,
+                "lim_min": -1.0,
+                "lim_max": 1.0,
+                "sqmean": null,
+                "num": null
+            }
+        }
+    }
+}

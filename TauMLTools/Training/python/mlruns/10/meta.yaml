@@ -1,0 +1,4 @@
+artifact_location: file:///afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/10
+experiment_id: '10'
+lifecycle_stage: active
+name: test

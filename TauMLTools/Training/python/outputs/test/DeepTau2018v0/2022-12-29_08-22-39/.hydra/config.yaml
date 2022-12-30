@@ -1,0 +1,1679 @@
+training_cfg:
+  Setup:
+    n_tau: 250
+    iso_cone: 0.5
+    n_inner_cells: 11
+    inner_cell_size: 0.02
+    n_outer_cells: 21
+    outer_cell_size: 0.05
+    n_threads: 1
+    debug: false
+    use_weights: true
+    tau_types_names:
+      '0': e
+      '1': mu
+      '2': tau
+      '3': jet
+    DeepTauVSjet_cut: -1.0
+    recompute_tautype: true
+    include_mismatched: false
+    input_dir: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Analysis/law/output_dir_2/
+    input_spectrum: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Analysis/law/output_spectrum_file_2.root
+    target_spectrum: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Analysis/law/output_spectrum_file_2.root
+    weight_thr: 100000.0
+    dataloader_core: TauMLTools/Training/interface/DataLoader_main.h
+    rm_inner_from_outer: false
+    input_type: ROOT
+    tf_input_dir: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/soft/CMSSW_12_3_6/src/
+    tf_dataset_x_order:
+    - TauFlat
+    - inner_egamma
+    - inner_muon
+    - inner_hadron
+    - outer_egamma
+    - outer_muon
+    - outer_hadron
+    adversarial_dataset: /eos/cms/store/group/phys_tau/TauML/prod_2018_v2/adversarial_datasets/AdvTraining
+    adv_parameter:
+    - 1
+    - 10
+    n_adv_tau: 100
+    adv_learning_rate: 0.01
+    use_previous_opt: false
+    adversarial_weights: /eos/cms/store/group/phys_tau/TauML/prod_2018_v2/adversarial_datasets/adversarial_weights/adv_weights.root
+    yaxis:
+    - 20.0
+    - 1000.0
+    xaxis_list:
+    - - 0.0
+      - 2.5
+    xmin: 0
+    xmax: 2.5
+  SetupNN:
+    model_name: DeepTau2018v0
+    n_batches: 80000
+    n_batches_val: 80000
+    n_batches_log: 1000
+    epoch: 0
+    n_epochs: 1
+    validation_split: 0.3
+    max_queue_size: 1
+    n_load_workers: 4
+    input_grids:
+    - - GridGlobal
+      - PfCand_electron
+      - PfCand_gamma
+      - Electron
+    - - GridGlobal
+      - PfCand_muon
+      - Muon
+    - - GridGlobal
+      - PfCand_chHad
+      - PfCand_nHad
+    TauLossesSFs:
+    - 1
+    - 2.5
+    - 5
+    - 1.5
+    optimizer_name: Nadam
+    learning_rate: 0.001
+    schedule_decay: 0.0001
+    step_decay: 0
+    tau_net:
+      activation: PReLU
+      dropout_rate: 0.2
+      reduction_rate: 1.4
+      first_layer_width: 2*n*(1+drop)
+      last_layer_width: n*(1+drop)
+    comp_net:
+      activation: PReLU
+      dropout_rate: 0.2
+      reduction_rate: 1.6
+      first_layer_width: 2*n*(1+drop)
+      last_layer_width: n*(1+drop)
+    comp_merge_net:
+      activation: PReLU
+      dropout_rate: 0.2
+      reduction_rate: 1.6
+      first_layer_width: 'n'
+      last_layer_width: 64
+    conv_2d_net:
+      activation: PReLU
+      dropout_rate: 0.2
+      reduction_rate: null
+      window_size: 3
+    dense_net:
+      activation: PReLU
+      dropout_rate: 0.2
+      reduction_rate: 1
+      first_layer_width: 200
+      last_layer_width: 200
+      min_n_layers: 4
+    first_layer_reg: null
+    active_features:
+    - TauFlat
+    - GridGlobal
+    - PfCand_electron
+    - PfCand_muon
+    - PfCand_chHad
+    - PfCand_nHad
+    - PfCand_gamma
+    - Electron
+    - Muon
+    cell_locations:
+    - inner
+    - outer
+    loss: tau_crossentropy_v2
+    using_new_loss: false
+    metrics:
+    - accuracy
+    - TauLosses.tau_crossentropy
+    - TauLosses.tau_crossentropy_v2
+    - TauLosses.Le
+    - TauLosses.Lmu
+    - TauLosses.Ljet
+    - TauLosses.He
+    - TauLosses.Hmu
+    - TauLosses.Htau
+    - TauLosses.Hjet
+    - TauLosses.Hcat_e
+    - TauLosses.Hcat_mu
+    - TauLosses.Hcat_jet
+    - TauLosses.Hbin
+    - TauLosses.Hcat_eInv
+    - TauLosses.Hcat_muInv
+    - TauLosses.Hcat_jetInv
+    - TauLosses.Fe
+    - TauLosses.Fmu
+    - TauLosses.Fjet
+    - TauLosses.Fcmb
+  CellObjectType:
+  - GridGlobal
+  - PfCand_electron
+  - PfCand_muon
+  - PfCand_chHad
+  - PfCand_nHad
+  - PfCand_gamma
+  - Electron
+  - Muon
+  Scaling_setup:
+    file_path: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Analysis/law/output_dir/ShuffleMergeSpectral_*.root
+    output_json_folder: /afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/scaling
+    file_range: -1
+    tree_name: taus
+    log_step: 10
+    version: 5
+    selection:
+    - -3.141592653589793
+    - 3.141592653589793
+    - (tau_dxy > -10) & (tau_dxy_error > 0)
+    - tau_dz_error > 0
+    - (tau_ip3d > - 10) & (tau_ip3d_error > 0)
+    - tau_e_ratio > 0
+    - tau_gj_angle_diff >= 0
+    - pfCand_particleType == 2
+    - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+    - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+      > 0)
+    - pfCand_particleType == 3
+    - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+    - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+      > 0)
+    - pfCand_particleType == 4
+    - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+    - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+      > 0)
+    - pfCand_particleType == 5
+    - pfCand_particleType == 1
+    - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+    - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+      > 0)
+    - muon_normalizedChi2 >= 0
+    - muon_pfEcalEnergy >= 0
+    - ele_closestCtfTrack_normalizedChi2 >= 0
+    - ele_cc_ele_energy >= 0
+    cone_definition:
+      inner:
+        min_pt: 30.0
+        min_radius: 0.05
+        opening_coef: 3.0
+      outer:
+        dR: 0.5
+    cone_selection:
+      TauFlat:
+        var_names:
+          pt: tau_pt
+          eta: tau_eta
+          phi: tau_phi
+        cone_types:
+        - null
+      GridGlobal:
+        var_names:
+          eta: tau_eta
+          phi: tau_phi
+        cone_types:
+        - null
+      PfCand_electron:
+        var_names:
+          eta: pfCand_eta
+          phi: pfCand_phi
+        cone_types:
+        - inner
+        - outer
+      PfCand_muon:
+        var_names:
+          eta: pfCand_eta
+          phi: pfCand_phi
+        cone_types:
+        - inner
+        - outer
+      PfCand_chHad:
+        var_names:
+          eta: pfCand_eta
+          phi: pfCand_phi
+        cone_types:
+        - inner
+        - outer
+      PfCand_nHad:
+        var_names:
+          eta: pfCand_eta
+          phi: pfCand_phi
+        cone_types:
+        - inner
+        - outer
+      PfCand_gamma:
+        var_names:
+          eta: pfCand_eta
+          phi: pfCand_phi
+        cone_types:
+        - inner
+        - outer
+      Electron:
+        var_names:
+          eta: ele_eta
+          phi: ele_phi
+        cone_types:
+        - inner
+        - outer
+      Muon:
+        var_names:
+          eta: muon_eta
+          phi: muon_phi
+        cone_types:
+        - inner
+        - outer
+  Features_all:
+    TauFlat:
+    - rho:
+      - null
+      - null
+      - linear
+      - 0
+      - 50
+    - tau_pt:
+      - null
+      - null
+      - linear
+      - 20
+      - 1000
+    - tau_eta:
+      - null
+      - null
+      - linear
+      - -2.3
+      - 2.3
+    - tau_phi:
+      - null
+      - null
+      - linear
+      - -3.141592653589793
+      - 3.141592653589793
+    - tau_mass:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_E_over_pt:
+      - null
+      - tau_E_over_pt: sqrt((tau_pt*cosh(tau_eta))*(tau_pt*cosh(tau_eta)) + tau_mass*tau_mass)/tau_pt
+      - normal
+      - -5
+      - 5
+    - tau_charge:
+      - null
+      - null
+      - no_scaling
+    - tau_n_charged_prongs:
+      - null
+      - tau_n_charged_prongs: tau_decayMode//5 + 1
+      - categorical
+    - tau_n_neutral_prongs:
+      - null
+      - tau_n_neutral_prongs: tau_decayMode%5
+      - categorical
+    - tau_chargedIsoPtSum:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_chargedIsoPtSumdR03_over_dR05:
+      - tau_chargedIsoPtSum!=0
+      - tau_chargedIsoPtSumdR03_over_dR05: tau_chargedIsoPtSumdR03/tau_chargedIsoPtSum
+      - no_scaling
+    - tau_footprintCorrection:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_neutralIsoPtSum:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_neutralIsoPtSumWeight_over_neutralIsoPtSum:
+      - tau_neutralIsoPtSum!=0
+      - tau_neutralIsoPtSumWeight_over_neutralIsoPtSum: tau_neutralIsoPtSumWeight/tau_neutralIsoPtSum
+      - no_scaling
+    - tau_neutralIsoPtSumWeightdR03_over_neutralIsoPtSum:
+      - tau_neutralIsoPtSum!=0
+      - tau_neutralIsoPtSumWeightdR03_over_neutralIsoPtSum: tau_neutralIsoPtSumWeightdR03/tau_neutralIsoPtSum
+      - no_scaling
+    - tau_neutralIsoPtSumdR03_over_dR05:
+      - tau_neutralIsoPtSum!=0
+      - tau_neutralIsoPtSumdR03_over_dR05: tau_neutralIsoPtSumdR03/tau_neutralIsoPtSum
+      - no_scaling
+    - tau_photonPtSumOutsideSignalCone:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_puCorrPtSum:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_dxy_valid:
+      - null
+      - tau_dxy_valid: (tau_dxy > -10) & (tau_dxy_error > 0)
+      - no_scaling
+    - tau_dxy:
+      - (tau_dxy > -10) & (tau_dxy_error > 0)
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_dxy_sig:
+      - (tau_dxy > -10) & (tau_dxy_error > 0)
+      - tau_dxy_sig: abs(tau_dxy)/tau_dxy_error
+      - normal
+      - -5
+      - 5
+    - tau_ip3d_valid:
+      - null
+      - tau_ip3d_valid: (tau_ip3d > - 10) & (tau_ip3d_error > 0)
+      - no_scaling
+    - tau_ip3d:
+      - (tau_ip3d > - 10) & (tau_ip3d_error > 0)
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_ip3d_sig:
+      - (tau_ip3d > - 10) & (tau_ip3d_error > 0)
+      - tau_ip3d_sig: abs(tau_ip3d)/tau_ip3d_error
+      - normal
+      - -5
+      - 5
+    - tau_dz:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_dz_sig_valid:
+      - null
+      - tau_dz_sig_valid: tau_dz_error > 0
+      - no_scaling
+    - tau_dz_sig:
+      - tau_dz_error > 0
+      - tau_dz_sig: abs(tau_dz)/tau_dz_error
+      - normal
+      - -5
+      - 5
+    - tau_flightLength_x:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_flightLength_y:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_flightLength_z:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_flightLength_sig:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_pt_weighted_deta_strip:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 1.0
+    - tau_pt_weighted_dphi_strip:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 1.0
+    - tau_pt_weighted_dr_signal:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_pt_weighted_dr_iso:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 1.0
+    - tau_leadingTrackNormChi2:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_e_ratio_valid:
+      - null
+      - tau_e_ratio_valid: tau_e_ratio > 0
+      - no_scaling
+    - tau_e_ratio:
+      - tau_e_ratio > 0
+      - null
+      - linear
+      - 0.0
+      - 1.0
+    - tau_gj_angle_diff_valid:
+      - null
+      - tau_gj_angle_diff_valid: tau_gj_angle_diff >= 0
+      - no_scaling
+    - tau_gj_angle_diff:
+      - tau_gj_angle_diff >= 0
+      - null
+      - linear
+      - 0.0
+      - 3.141592653589793
+    - tau_n_photons:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - tau_emFraction:
+      - null
+      - null
+      - linear
+      - -1.0
+      - 1.0
+    - tau_inside_ecal_crack:
+      - null
+      - null
+      - no_scaling
+    - tau_leadChargedCand_etaAtEcalEntrance_minus_tau_eta:
+      - null
+      - tau_leadChargedCand_etaAtEcalEntrance_minus_tau_eta: tau_leadChargedCand_etaAtEcalEntrance
+          - tau_eta
+      - normal
+      - -5
+      - 5
+    GridGlobal:
+    - rho:
+      - null
+      - null
+      - linear
+      - 0
+      - 50
+    - tau_pt:
+      - null
+      - null
+      - linear
+      - 20
+      - 1000
+    - tau_eta:
+      - null
+      - null
+      - linear
+      - -2.3
+      - 2.3
+    - tau_inside_ecal_crack:
+      - null
+      - null
+      - no_scaling
+    PfCand_electron:
+    - pfCand_ele_valid:
+      - pfCand_particleType == 2
+      - null
+      - no_scaling
+    - pfCand_ele_rel_pt:
+      - pfCand_particleType == 2
+      - pfCand_ele_rel_pt: pfCand_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_deta:
+      - pfCand_particleType == 2
+      - pfCand_ele_deta: pfCand_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_ele_dphi:
+      - pfCand_particleType == 2
+      - pfCand_ele_dphi: pfCand_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_ele_pvAssociationQuality:
+      - pfCand_particleType == 2
+      - pfCand_ele_pvAssociationQuality: pfCand_pvAssociationQuality
+      - categorical
+    - pfCand_ele_puppiWeight:
+      - pfCand_particleType == 2
+      - pfCand_ele_puppiWeight: pfCand_puppiWeight
+      - no_scaling
+    - pfCand_ele_charge:
+      - pfCand_particleType == 2
+      - pfCand_ele_charge: pfCand_charge
+      - no_scaling
+    - pfCand_ele_lostInnerHits:
+      - pfCand_particleType == 2
+      - pfCand_ele_lostInnerHits: pfCand_lostInnerHits
+      - categorical
+    - pfCand_ele_nPixelHits:
+      - pfCand_particleType == 2
+      - pfCand_ele_nPixelHits: pfCand_nPixelHits
+      - linear
+      - 0
+      - 10
+    - pfCand_ele_vertex_dx:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dx: pfCand_vertex_x-pv_x
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dy:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dy: pfCand_vertex_y-pv_y
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dz:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dz: pfCand_vertex_z-pv_z
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dt:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dt: pfCand_vertex_t-pv_t
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dx_tauFL:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dx_tauFL: pfCand_vertex_x-pv_x-tau_flightLength_x
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dy_tauFL:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dy_tauFL: pfCand_vertex_y-pv_y-tau_flightLength_y
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_vertex_dz_tauFL:
+      - pfCand_particleType == 2
+      - pfCand_ele_vertex_dz_tauFL: pfCand_vertex_z-pv_z-tau_flightLength_z
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_hasTrackDetails:
+      - pfCand_particleType == 2
+      - pfCand_ele_hasTrackDetails: pfCand_hasTrackDetails==1
+      - no_scaling
+    - pfCand_ele_dxy:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_dxy: pfCand_dxy
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_dxy_sig:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_dxy_sig: abs(pfCand_dxy)/pfCand_dxy_error
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_dz:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_dz: pfCand_dz
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_dz_sig:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_dz_sig: abs(pfCand_dz)/pfCand_dz_error
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_time:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_time: pfCand_time
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_time_sig:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1)
+      - pfCand_ele_time_sig: abs(pfCand_time)/pfCand_timeError
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_track_chi2_ndof:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_ele_track_chi2_ndof: pfCand_track_chi2/pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    - pfCand_ele_track_ndof:
+      - (pfCand_particleType == 2) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_ele_track_ndof: pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    PfCand_muon:
+    - pfCand_muon_valid:
+      - pfCand_particleType == 3
+      - null
+      - no_scaling
+    - pfCand_muon_rel_pt:
+      - pfCand_particleType == 3
+      - pfCand_muon_rel_pt: pfCand_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_deta:
+      - pfCand_particleType == 3
+      - pfCand_muon_deta: pfCand_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_muon_dphi:
+      - pfCand_particleType == 3
+      - pfCand_muon_dphi: pfCand_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_muon_pvAssociationQuality:
+      - pfCand_particleType == 3
+      - pfCand_muon_pvAssociationQuality: pfCand_pvAssociationQuality
+      - categorical
+    - pfCand_muon_fromPV:
+      - pfCand_particleType == 3
+      - pfCand_muon_fromPV: pfCand_fromPV
+      - categorical
+    - pfCand_muon_puppiWeight:
+      - pfCand_particleType == 3
+      - pfCand_muon_puppiWeight: pfCand_puppiWeight
+      - no_scaling
+    - pfCand_muon_charge:
+      - pfCand_particleType == 3
+      - pfCand_muon_charge: pfCand_charge
+      - no_scaling
+    - pfCand_muon_lostInnerHits:
+      - pfCand_particleType == 3
+      - pfCand_muon_lostInnerHits: pfCand_lostInnerHits
+      - categorical
+    - pfCand_muon_nPixelHits:
+      - pfCand_particleType == 3
+      - pfCand_muon_nPixelHits: pfCand_nPixelHits
+      - linear
+      - 0
+      - 11
+    - pfCand_muon_vertex_dx:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dx: pfCand_vertex_x-pv_x
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dy:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dy: pfCand_vertex_y-pv_y
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dz:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dz: pfCand_vertex_z-pv_z
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dt:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dt: pfCand_vertex_t-pv_t
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dx_tauFL:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dx_tauFL: pfCand_vertex_x-pv_x-tau_flightLength_x
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dy_tauFL:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dy_tauFL: pfCand_vertex_y-pv_y-tau_flightLength_y
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_vertex_dz_tauFL:
+      - pfCand_particleType == 3
+      - pfCand_muon_vertex_dz_tauFL: pfCand_vertex_z-pv_z-tau_flightLength_z
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_hasTrackDetails:
+      - pfCand_particleType == 3
+      - pfCand_muon_hasTrackDetails: pfCand_hasTrackDetails==1
+      - no_scaling
+    - pfCand_muon_dxy:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_dxy: pfCand_dxy
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_dxy_sig:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_dxy_sig: abs(pfCand_dxy)/pfCand_dxy_error
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_dz:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_dz: pfCand_dz
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_dz_sig:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_dz_sig: abs(pfCand_dz)/pfCand_dz_error
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_time:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_time: pfCand_time
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_time_sig:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1)
+      - pfCand_muon_time_sig: abs(pfCand_time)/pfCand_timeError
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_track_chi2_ndof:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_muon_track_chi2_ndof: pfCand_track_chi2/pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    - pfCand_muon_track_ndof:
+      - (pfCand_particleType == 3) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_muon_track_ndof: pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    PfCand_chHad:
+    - pfCand_chHad_valid:
+      - pfCand_particleType == 1
+      - null
+      - no_scaling
+    - pfCand_chHad_rel_pt:
+      - pfCand_particleType == 1
+      - pfCand_chHad_rel_pt: pfCand_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_deta:
+      - pfCand_particleType == 1
+      - pfCand_chHad_deta: pfCand_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_chHad_dphi:
+      - pfCand_particleType == 1
+      - pfCand_chHad_dphi: pfCand_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_chHad_tauLeadChargedHadrCand:
+      - pfCand_particleType == 1
+      - pfCand_chHad_tauLeadChargedHadrCand: pfCand_tauLeadChargedHadrCand
+      - no_scaling
+    - pfCand_chHad_pvAssociationQuality:
+      - pfCand_particleType == 1
+      - pfCand_chHad_pvAssociationQuality: pfCand_pvAssociationQuality
+      - categorical
+    - pfCand_chHad_fromPV:
+      - pfCand_particleType == 1
+      - pfCand_chHad_fromPV: pfCand_fromPV
+      - categorical
+    - pfCand_chHad_puppiWeight:
+      - pfCand_particleType == 1
+      - pfCand_chHad_puppiWeight: pfCand_puppiWeight
+      - no_scaling
+    - pfCand_chHad_puppiWeightNoLep:
+      - pfCand_particleType == 1
+      - pfCand_chHad_puppiWeightNoLep: pfCand_puppiWeightNoLep
+      - no_scaling
+    - pfCand_chHad_charge:
+      - pfCand_particleType == 1
+      - pfCand_chHad_charge: pfCand_charge
+      - no_scaling
+    - pfCand_chHad_lostInnerHits:
+      - pfCand_particleType == 1
+      - pfCand_chHad_lostInnerHits: pfCand_lostInnerHits
+      - categorical
+    - pfCand_chHad_nPixelHits:
+      - pfCand_particleType == 1
+      - pfCand_chHad_nPixelHits: pfCand_nPixelHits
+      - linear
+      - 0
+      - 12
+    - pfCand_chHad_vertex_dx:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dx: pfCand_vertex_x - pv_x
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dy:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dy: pfCand_vertex_y - pv_y
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dz:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dz: pfCand_vertex_z - pv_z
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dt:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dt: pfCand_vertex_t - pv_t
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dx_tauFL:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dx_tauFL: pfCand_vertex_x - pv_x - tau_flightLength_x
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dy_tauFL:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dy_tauFL: pfCand_vertex_y - pv_y - tau_flightLength_y
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_vertex_dz_tauFL:
+      - pfCand_particleType == 1
+      - pfCand_chHad_vertex_dz_tauFL: pfCand_vertex_z - pv_z - tau_flightLength_z
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_hasTrackDetails:
+      - pfCand_particleType == 1
+      - pfCand_chHad_hasTrackDetails: pfCand_hasTrackDetails==1
+      - no_scaling
+    - pfCand_chHad_dxy:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_dxy: pfCand_dxy
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_dxy_sig:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_dxy_sig: abs(pfCand_dxy)/pfCand_dxy_error
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_dz:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_dz: pfCand_dz
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_dz_sig:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_dz_sig: abs(pfCand_dz)/pfCand_dz_error
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_time:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_time: pfCand_time
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_time_sig:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1)
+      - pfCand_chHad_time_sig: abs(pfCand_time)/pfCand_timeError
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_track_chi2_ndof:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_chHad_track_chi2_ndof: pfCand_track_chi2/pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_track_ndof:
+      - (pfCand_particleType == 1) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_chHad_track_ndof: pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    - pfCand_chHad_hcalFraction:
+      - pfCand_particleType == 1
+      - pfCand_chHad_hcalFraction: pfCand_hcalFraction
+      - no_scaling
+    - pfCand_chHad_rawCaloFraction:
+      - pfCand_particleType == 1
+      - pfCand_chHad_rawCaloFraction: pfCand_rawCaloFraction
+      - linear
+      - 0.0
+      - 2.6
+    PfCand_nHad:
+    - pfCand_nHad_valid:
+      - pfCand_particleType == 5
+      - null
+      - no_scaling
+    - pfCand_nHad_rel_pt:
+      - pfCand_particleType == 5
+      - pfCand_nHad_rel_pt: pfCand_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - pfCand_nHad_deta:
+      - pfCand_particleType == 5
+      - pfCand_nHad_deta: pfCand_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_nHad_dphi:
+      - pfCand_particleType == 5
+      - pfCand_nHad_dphi: pfCand_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_nHad_puppiWeight:
+      - pfCand_particleType == 5
+      - pfCand_nHad_puppiWeight: pfCand_puppiWeight
+      - no_scaling
+    - pfCand_nHad_puppiWeightNoLep:
+      - pfCand_particleType == 5
+      - pfCand_nHad_puppiWeightNoLep: pfCand_puppiWeightNoLep
+      - no_scaling
+    - pfCand_nHad_hcalFraction:
+      - pfCand_particleType == 5
+      - pfCand_nHad_hcalFraction: pfCand_hcalFraction
+      - no_scaling
+    PfCand_gamma:
+    - pfCand_gamma_valid:
+      - pfCand_particleType == 4
+      - null
+      - no_scaling
+    - pfCand_gamma_rel_pt:
+      - pfCand_particleType == 4
+      - pfCand_gamma_rel_pt: pfCand_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_deta:
+      - pfCand_particleType == 4
+      - pfCand_gamma_deta: pfCand_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_gamma_dphi:
+      - pfCand_particleType == 4
+      - pfCand_gamma_dphi: pfCand_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - pfCand_gamma_pvAssociationQuality:
+      - pfCand_particleType == 4
+      - pfCand_gamma_pvAssociationQuality: pfCand_pvAssociationQuality
+      - categorical
+    - pfCand_gamma_fromPV:
+      - pfCand_particleType == 4
+      - pfCand_gamma_fromPV: pfCand_fromPV
+      - categorical
+    - pfCand_gamma_puppiWeight:
+      - pfCand_particleType == 4
+      - pfCand_gamma_puppiWeight: pfCand_puppiWeight
+      - no_scaling
+    - pfCand_gamma_puppiWeightNoLep:
+      - pfCand_particleType == 4
+      - pfCand_gamma_puppiWeightNoLep: pfCand_puppiWeightNoLep
+      - no_scaling
+    - pfCand_gamma_lostInnerHits:
+      - pfCand_particleType == 4
+      - pfCand_gamma_lostInnerHits: pfCand_lostInnerHits
+      - categorical
+    - pfCand_gamma_nPixelHits:
+      - pfCand_particleType == 4
+      - pfCand_gamma_nPixelHits: pfCand_nPixelHits
+      - linear
+      - 0
+      - 7
+    - pfCand_gamma_vertex_dx:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dx: pfCand_vertex_x - pv_x
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dy:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dy: pfCand_vertex_y - pv_y
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dz:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dz: pfCand_vertex_z - pv_z
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dt:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dt: pfCand_vertex_t - pv_t
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dx_tauFL:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dx_tauFL: pfCand_vertex_x - pv_x - tau_flightLength_x
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dy_tauFL:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dy_tauFL: pfCand_vertex_y - pv_y - tau_flightLength_y
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_vertex_dz_tauFL:
+      - pfCand_particleType == 4
+      - pfCand_gamma_vertex_dz_tauFL: pfCand_vertex_z - pv_z - tau_flightLength_z
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_hasTrackDetails:
+      - pfCand_particleType == 4
+      - pfCand_gamma_hasTrackDetails: pfCand_hasTrackDetails==1
+      - no_scaling
+    - pfCand_gamma_dxy:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_dxy: pfCand_dxy
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_dxy_sig:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_dxy_sig: abs(pfCand_dxy)/pfCand_dxy_error
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_dz:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_dz: pfCand_dz
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_dz_sig:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_dz_sig: abs(pfCand_dz)/pfCand_dz_error
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_time:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_time: pfCand_time
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_time_sig:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1)
+      - pfCand_gamma_time_sig: abs(pfCand_time)/pfCand_timeError
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_track_chi2_ndof:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_gamma_track_chi2_ndof: pfCand_track_chi2/pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    - pfCand_gamma_track_ndof:
+      - (pfCand_particleType == 4) & (pfCand_hasTrackDetails == 1) & (pfCand_track_ndof
+        > 0)
+      - pfCand_gamma_track_ndof: pfCand_track_ndof
+      - normal
+      - -5
+      - 5
+    Electron:
+    - ele_valid:
+      - null
+      - null
+      - no_scaling
+    - ele_rel_pt:
+      - null
+      - ele_rel_pt: ele_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - ele_deta:
+      - null
+      - ele_deta: ele_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - ele_dphi:
+      - null
+      - ele_dphi: ele_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - ele_cc_valid:
+      - null
+      - ele_cc_valid: ele_cc_ele_energy >= 0
+      - no_scaling
+    - ele_cc_ele_rel_energy:
+      - ele_cc_ele_energy >= 0
+      - ele_cc_ele_rel_energy: ele_cc_ele_energy/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_cc_gamma_rel_energy:
+      - ele_cc_ele_energy >= 0
+      - ele_cc_gamma_rel_energy: ele_cc_gamma_energy/ele_cc_ele_energy
+      - normal
+      - -5
+      - 5
+    - ele_cc_n_gamma:
+      - ele_cc_ele_energy >= 0
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_rel_trackMomentumAtVtx:
+      - null
+      - ele_rel_trackMomentumAtVtx: ele_trackMomentumAtVtx/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_rel_trackMomentumAtCalo:
+      - null
+      - ele_rel_trackMomentumAtCalo: ele_trackMomentumAtCalo/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_rel_trackMomentumOut:
+      - null
+      - ele_rel_trackMomentumOut: ele_trackMomentumOut/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_rel_trackMomentumAtEleClus:
+      - null
+      - ele_rel_trackMomentumAtEleClus: ele_trackMomentumAtEleClus/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_rel_trackMomentumAtVtxWithConstraint:
+      - null
+      - ele_rel_trackMomentumAtVtxWithConstraint: ele_trackMomentumAtVtxWithConstraint/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_rel_ecalEnergy:
+      - null
+      - ele_rel_ecalEnergy: ele_ecalEnergy/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_ecalEnergy_sig:
+      - null
+      - ele_ecalEnergy_sig: ele_ecalEnergy/ele_ecalEnergy_error
+      - normal
+      - -5
+      - 5
+    - ele_eSuperClusterOverP:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_eSeedClusterOverP:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_eSeedClusterOverPout:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_eEleClusterOverPout:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaEtaSuperClusterTrackAtVtx:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaEtaSeedClusterTrackAtCalo:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaEtaEleClusterTrackAtCalo:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaPhiEleClusterTrackAtCalo:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaPhiSuperClusterTrackAtVtx:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_deltaPhiSeedClusterTrackAtCalo:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_mvaInput_earlyBrem:
+      - null
+      - null
+      - categorical
+    - ele_mvaInput_lateBrem:
+      - null
+      - null
+      - categorical
+    - ele_mvaInput_sigmaEtaEta:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_mvaInput_hadEnergy:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_mvaInput_deltaEta:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_gsfTrack_normalizedChi2:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_gsfTrack_numberOfValidHits:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_rel_gsfTrack_pt:
+      - null
+      - ele_rel_gsfTrack_pt: ele_gsfTrack_pt/ele_pt
+      - normal
+      - -5
+      - 5
+    - ele_gsfTrack_pt_sig:
+      - null
+      - ele_gsfTrack_pt_sig: ele_gsfTrack_pt/ele_gsfTrack_pt_error
+      - normal
+      - -5
+      - 5
+    - ele_has_closestCtfTrack:
+      - null
+      - ele_has_closestCtfTrack: ele_closestCtfTrack_normalizedChi2 >= 0
+      - no_scaling
+    - ele_closestCtfTrack_normalizedChi2:
+      - ele_closestCtfTrack_normalizedChi2 >= 0
+      - null
+      - normal
+      - -5
+      - 5
+    - ele_closestCtfTrack_numberOfValidHits:
+      - ele_closestCtfTrack_normalizedChi2 >= 0
+      - null
+      - normal
+      - -5
+      - 5
+    Muon:
+    - muon_valid:
+      - null
+      - null
+      - no_scaling
+    - muon_rel_pt:
+      - null
+      - muon_rel_pt: muon_pt/tau_pt
+      - normal
+      - -5
+      - 5
+    - muon_deta:
+      - null
+      - muon_deta: muon_eta - tau_eta
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - muon_dphi:
+      - null
+      - muon_dphi: muon_phi - tau_phi
+      - linear
+      - inner:
+        - -0.1
+        - 0.1
+        outer:
+        - -0.5
+        - 0.5
+    - muon_dxy:
+      - null
+      - null
+      - normal
+      - -5
+      - 5
+    - muon_dxy_sig:
+      - null
+      - muon_dxy_sig: abs(muon_dxy)/muon_dxy_error
+      - normal
+      - -5
+      - 5
+    - muon_normalizedChi2_valid:
+      - null
+      - muon_normalizedChi2_valid: muon_normalizedChi2 >= 0
+      - no_scaling
+    - muon_normalizedChi2:
+      - muon_normalizedChi2 >= 0
+      - null
+      - normal
+      - -5
+      - 5
+    - muon_numberOfValidHits:
+      - muon_normalizedChi2 >= 0
+      - null
+      - normal
+      - -5
+      - 5
+    - muon_segmentCompatibility:
+      - null
+      - null
+      - no_scaling
+    - muon_caloCompatibility:
+      - null
+      - null
+      - no_scaling
+    - muon_pfEcalEnergy_valid:
+      - null
+      - muon_pfEcalEnergy_valid: muon_pfEcalEnergy >= 0
+      - no_scaling
+    - muon_rel_pfEcalEnergy:
+      - muon_pfEcalEnergy >= 0
+      - muon_rel_pfEcalEnergy: muon_pfEcalEnergy/muon_pt
+      - normal
+      - -5
+      - 5
+    - muon_n_matches_DT_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_DT_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_DT_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_DT_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_CSC_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 6.0
+    - muon_n_matches_CSC_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_CSC_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_CSC_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_matches_RPC_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 7.0
+    - muon_n_matches_RPC_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 6.0
+    - muon_n_matches_RPC_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 4.0
+    - muon_n_matches_RPC_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 4.0
+    - muon_n_hits_DT_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_DT_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_DT_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_DT_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 8.0
+    - muon_n_hits_CSC_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 24.0
+    - muon_n_hits_CSC_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_CSC_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_CSC_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 12.0
+    - muon_n_hits_RPC_1:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 4.0
+    - muon_n_hits_RPC_2:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 4.0
+    - muon_n_hits_RPC_3:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+    - muon_n_hits_RPC_4:
+      - null
+      - null
+      - linear
+      - 0.0
+      - 2.0
+  Features_disable:
+    TauFlat:
+    - tau_phi
+    GridGlobal: []
+    PfCand_electron:
+    - pfCand_ele_vertex_dt
+    - pfCand_ele_time
+    - pfCand_ele_time_sig
+    PfCand_muon:
+    - pfCand_muon_vertex_dt
+    - pfCand_muon_time
+    - pfCand_muon_time_sig
+    PfCand_chHad:
+    - pfCand_chHad_vertex_dt
+    - pfCand_chHad_time
+    - pfCand_chHad_time_sig
+    PfCand_nHad: []
+    PfCand_gamma:
+    - pfCand_gamma_vertex_dt
+    - pfCand_gamma_time
+    - pfCand_gamma_time_sig
+    - pfCand_gamma_dxy
+    - pfCand_gamma_dxy_sig
+    - pfCand_gamma_dz
+    - pfCand_gamma_dz_sig
+    - pfCand_gamma_track_chi2_ndof
+    - pfCand_gamma_track_ndof
+    Electron:
+    - ele_mvaInput_sigmaEtaEta
+    - ele_mvaInput_hadEnergy
+    - ele_mvaInput_deltaEta
+    Muon: []
+path_to_mlflow: mlruns
+experiment_name: test
+pretrained: null
+scaling_cfg: ../../scaling_2/scaling_params_v5.json
+gpu_cfg:
+  gpu_mem: 7
+  gpu_index: 0
+log_suffix: step1

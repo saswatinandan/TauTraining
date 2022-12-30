@@ -1,0 +1,9 @@
+- path_to_mlflow=../Training/python/mlruns/
+- experiment_id=5
+- run_id=efbb967a38e547b08b21a6ba74b61a27
+- discriminator=DeepTau_run3
+- path_to_input=null
+- path_to_pred="${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5"
+- path_to_target="${path_to_mlflow}/${experiment_id}/${run_id}/artifacts/predictions/{sample_alias}/*_pred.h5"
+- vs_type=jet
+- dataset_alias=jet

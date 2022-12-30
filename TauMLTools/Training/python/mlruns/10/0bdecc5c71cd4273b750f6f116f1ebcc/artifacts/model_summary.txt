@@ -1,0 +1,542 @@
+Model: "DeepTau2018v0"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_outer_egamma (InputLayer  [(None, 21, 21, 77)  0          []                               
+ )                              ]                                                                 
+                                                                                                  
+ input_outer_muon (InputLayer)  [(None, 21, 21, 64)  0           []                               
+                                ]                                                                 
+                                                                                                  
+ input_outer_hadrons (InputLaye  [(None, 21, 21, 38)  0          []                               
+ r)                             ]                                                                 
+                                                                                                  
+ outer_egamma_conv_1 (Conv2D)   (None, 21, 21, 185)  14430       ['input_outer_egamma[0][0]']     
+                                                                                                  
+ outer_muon_conv_1 (Conv2D)     (None, 21, 21, 154)  10010       ['input_outer_muon[0][0]']       
+                                                                                                  
+ outer_hadrons_conv_1 (Conv2D)  (None, 21, 21, 92)   3588        ['input_outer_hadrons[0][0]']    
+                                                                                                  
+ outer_egamma_norm_1 (BatchNorm  (None, 21, 21, 185)  740        ['outer_egamma_conv_1[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ outer_muon_norm_1 (BatchNormal  (None, 21, 21, 154)  616        ['outer_muon_conv_1[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ outer_hadrons_norm_1 (BatchNor  (None, 21, 21, 92)  368         ['outer_hadrons_conv_1[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_egamma_activation_1 (PRe  (None, 21, 21, 185)  185        ['outer_egamma_norm_1[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ outer_muon_activation_1 (PReLU  (None, 21, 21, 154)  154        ['outer_muon_norm_1[0][0]']      
+ )                                                                                                
+                                                                                                  
+ outer_hadrons_activation_1 (PR  (None, 21, 21, 92)  92          ['outer_hadrons_norm_1[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_egamma_dropout_1 (Dropou  (None, 21, 21, 185)  0          ['outer_egamma_activation_1[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ outer_muon_dropout_1 (Dropout)  (None, 21, 21, 154)  0          ['outer_muon_activation_1[0][0]']
+                                                                                                  
+ outer_hadrons_dropout_1 (Dropo  (None, 21, 21, 92)  0           ['outer_hadrons_activation_1[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_egamma_conv_2 (Conv2D)   (None, 21, 21, 115)  21390       ['outer_egamma_dropout_1[0][0]'] 
+                                                                                                  
+ outer_muon_conv_2 (Conv2D)     (None, 21, 21, 96)   14880       ['outer_muon_dropout_1[0][0]']   
+                                                                                                  
+ outer_hadrons_conv_2 (Conv2D)  (None, 21, 21, 57)   5301        ['outer_hadrons_dropout_1[0][0]']
+                                                                                                  
+ outer_egamma_norm_2 (BatchNorm  (None, 21, 21, 115)  460        ['outer_egamma_conv_2[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ outer_muon_norm_2 (BatchNormal  (None, 21, 21, 96)  384         ['outer_muon_conv_2[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ outer_hadrons_norm_2 (BatchNor  (None, 21, 21, 57)  228         ['outer_hadrons_conv_2[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_egamma_activation_2 (PRe  (None, 21, 21, 115)  115        ['outer_egamma_norm_2[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ outer_muon_activation_2 (PReLU  (None, 21, 21, 96)  96          ['outer_muon_norm_2[0][0]']      
+ )                                                                                                
+                                                                                                  
+ outer_hadrons_activation_2 (PR  (None, 21, 21, 57)  57          ['outer_hadrons_norm_2[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_egamma_dropout_2 (Dropou  (None, 21, 21, 115)  0          ['outer_egamma_activation_2[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ outer_muon_dropout_2 (Dropout)  (None, 21, 21, 96)  0           ['outer_muon_activation_2[0][0]']
+                                                                                                  
+ outer_hadrons_dropout_2 (Dropo  (None, 21, 21, 57)  0           ['outer_hadrons_activation_2[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_egamma_conv_3 (Conv2D)   (None, 21, 21, 93)   10788       ['outer_egamma_dropout_2[0][0]'] 
+                                                                                                  
+ outer_muon_conv_3 (Conv2D)     (None, 21, 21, 77)   7469        ['outer_muon_dropout_2[0][0]']   
+                                                                                                  
+ outer_hadrons_conv_3 (Conv2D)  (None, 21, 21, 46)   2668        ['outer_hadrons_dropout_2[0][0]']
+                                                                                                  
+ outer_egamma_norm_3 (BatchNorm  (None, 21, 21, 93)  372         ['outer_egamma_conv_3[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ outer_muon_norm_3 (BatchNormal  (None, 21, 21, 77)  308         ['outer_muon_conv_3[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ outer_hadrons_norm_3 (BatchNor  (None, 21, 21, 46)  184         ['outer_hadrons_conv_3[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_egamma_activation_3 (PRe  (None, 21, 21, 93)  93          ['outer_egamma_norm_3[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ outer_muon_activation_3 (PReLU  (None, 21, 21, 77)  77          ['outer_muon_norm_3[0][0]']      
+ )                                                                                                
+                                                                                                  
+ outer_hadrons_activation_3 (PR  (None, 21, 21, 46)  46          ['outer_hadrons_norm_3[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_egamma_dropout_3 (Dropou  (None, 21, 21, 93)  0           ['outer_egamma_activation_3[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ outer_muon_dropout_3 (Dropout)  (None, 21, 21, 77)  0           ['outer_muon_activation_3[0][0]']
+                                                                                                  
+ outer_hadrons_dropout_3 (Dropo  (None, 21, 21, 46)  0           ['outer_hadrons_activation_3[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_cell_concat (Concatenate  (None, 21, 21, 216)  0          ['outer_egamma_dropout_3[0][0]', 
+ )                                                                'outer_muon_dropout_3[0][0]',   
+                                                                  'outer_hadrons_dropout_3[0][0]']
+                                                                                                  
+ outer_all_conv_1 (Conv2D)      (None, 21, 21, 216)  46872       ['outer_cell_concat[0][0]']      
+                                                                                                  
+ outer_all_norm_1 (BatchNormali  (None, 21, 21, 216)  864        ['outer_all_conv_1[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ outer_all_activation_1 (PReLU)  (None, 21, 21, 216)  216        ['outer_all_norm_1[0][0]']       
+                                                                                                  
+ outer_all_dropout_1 (Dropout)  (None, 21, 21, 216)  0           ['outer_all_activation_1[0][0]'] 
+                                                                                                  
+ outer_all_conv_2 (Conv2D)      (None, 21, 21, 135)  29295       ['outer_all_dropout_1[0][0]']    
+                                                                                                  
+ outer_all_norm_2 (BatchNormali  (None, 21, 21, 135)  540        ['outer_all_conv_2[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ input_inner_egamma (InputLayer  [(None, 11, 11, 77)  0          []                               
+ )                              ]                                                                 
+                                                                                                  
+ input_inner_muon (InputLayer)  [(None, 11, 11, 64)  0           []                               
+                                ]                                                                 
+                                                                                                  
+ input_inner_hadrons (InputLaye  [(None, 11, 11, 38)  0          []                               
+ r)                             ]                                                                 
+                                                                                                  
+ outer_all_activation_2 (PReLU)  (None, 21, 21, 135)  135        ['outer_all_norm_2[0][0]']       
+                                                                                                  
+ inner_egamma_conv_1 (Conv2D)   (None, 11, 11, 185)  14430       ['input_inner_egamma[0][0]']     
+                                                                                                  
+ inner_muon_conv_1 (Conv2D)     (None, 11, 11, 154)  10010       ['input_inner_muon[0][0]']       
+                                                                                                  
+ inner_hadrons_conv_1 (Conv2D)  (None, 11, 11, 92)   3588        ['input_inner_hadrons[0][0]']    
+                                                                                                  
+ outer_all_dropout_2 (Dropout)  (None, 21, 21, 135)  0           ['outer_all_activation_2[0][0]'] 
+                                                                                                  
+ inner_egamma_norm_1 (BatchNorm  (None, 11, 11, 185)  740        ['inner_egamma_conv_1[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ inner_muon_norm_1 (BatchNormal  (None, 11, 11, 154)  616        ['inner_muon_conv_1[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ inner_hadrons_norm_1 (BatchNor  (None, 11, 11, 92)  368         ['inner_hadrons_conv_1[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_conv_3 (Conv2D)      (None, 21, 21, 84)   11424       ['outer_all_dropout_2[0][0]']    
+                                                                                                  
+ inner_egamma_activation_1 (PRe  (None, 11, 11, 185)  185        ['inner_egamma_norm_1[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ inner_muon_activation_1 (PReLU  (None, 11, 11, 154)  154        ['inner_muon_norm_1[0][0]']      
+ )                                                                                                
+                                                                                                  
+ inner_hadrons_activation_1 (PR  (None, 11, 11, 92)  92          ['inner_hadrons_norm_1[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_norm_3 (BatchNormali  (None, 21, 21, 84)  336         ['outer_all_conv_3[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ inner_egamma_dropout_1 (Dropou  (None, 11, 11, 185)  0          ['inner_egamma_activation_1[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ inner_muon_dropout_1 (Dropout)  (None, 11, 11, 154)  0          ['inner_muon_activation_1[0][0]']
+                                                                                                  
+ inner_hadrons_dropout_1 (Dropo  (None, 11, 11, 92)  0           ['inner_hadrons_activation_1[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_activation_3 (PReLU)  (None, 21, 21, 84)  84          ['outer_all_norm_3[0][0]']       
+                                                                                                  
+ inner_egamma_conv_2 (Conv2D)   (None, 11, 11, 115)  21390       ['inner_egamma_dropout_1[0][0]'] 
+                                                                                                  
+ inner_muon_conv_2 (Conv2D)     (None, 11, 11, 96)   14880       ['inner_muon_dropout_1[0][0]']   
+                                                                                                  
+ inner_hadrons_conv_2 (Conv2D)  (None, 11, 11, 57)   5301        ['inner_hadrons_dropout_1[0][0]']
+                                                                                                  
+ outer_all_dropout_3 (Dropout)  (None, 21, 21, 84)   0           ['outer_all_activation_3[0][0]'] 
+                                                                                                  
+ inner_egamma_norm_2 (BatchNorm  (None, 11, 11, 115)  460        ['inner_egamma_conv_2[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ inner_muon_norm_2 (BatchNormal  (None, 11, 11, 96)  384         ['inner_muon_conv_2[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ inner_hadrons_norm_2 (BatchNor  (None, 11, 11, 57)  228         ['inner_hadrons_conv_2[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_conv_4 (Conv2D)      (None, 21, 21, 64)   5440        ['outer_all_dropout_3[0][0]']    
+                                                                                                  
+ inner_egamma_activation_2 (PRe  (None, 11, 11, 115)  115        ['inner_egamma_norm_2[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ inner_muon_activation_2 (PReLU  (None, 11, 11, 96)  96          ['inner_muon_norm_2[0][0]']      
+ )                                                                                                
+                                                                                                  
+ inner_hadrons_activation_2 (PR  (None, 11, 11, 57)  57          ['inner_hadrons_norm_2[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_norm_4 (BatchNormali  (None, 21, 21, 64)  256         ['outer_all_conv_4[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ inner_egamma_dropout_2 (Dropou  (None, 11, 11, 115)  0          ['inner_egamma_activation_2[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ inner_muon_dropout_2 (Dropout)  (None, 11, 11, 96)  0           ['inner_muon_activation_2[0][0]']
+                                                                                                  
+ inner_hadrons_dropout_2 (Dropo  (None, 11, 11, 57)  0           ['inner_hadrons_activation_2[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_activation_4 (PReLU)  (None, 21, 21, 64)  64          ['outer_all_norm_4[0][0]']       
+                                                                                                  
+ inner_egamma_conv_3 (Conv2D)   (None, 11, 11, 93)   10788       ['inner_egamma_dropout_2[0][0]'] 
+                                                                                                  
+ inner_muon_conv_3 (Conv2D)     (None, 11, 11, 77)   7469        ['inner_muon_dropout_2[0][0]']   
+                                                                                                  
+ inner_hadrons_conv_3 (Conv2D)  (None, 11, 11, 46)   2668        ['inner_hadrons_dropout_2[0][0]']
+                                                                                                  
+ outer_all_dropout_4 (Dropout)  (None, 21, 21, 64)   0           ['outer_all_activation_4[0][0]'] 
+                                                                                                  
+ inner_egamma_norm_3 (BatchNorm  (None, 11, 11, 93)  372         ['inner_egamma_conv_3[0][0]']    
+ alization)                                                                                       
+                                                                                                  
+ inner_muon_norm_3 (BatchNormal  (None, 11, 11, 77)  308         ['inner_muon_conv_3[0][0]']      
+ ization)                                                                                         
+                                                                                                  
+ inner_hadrons_norm_3 (BatchNor  (None, 11, 11, 46)  184         ['inner_hadrons_conv_3[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_conv_1 (Conv2D)  (None, 19, 19, 64)   36928       ['outer_all_dropout_4[0][0]']    
+                                                                                                  
+ inner_egamma_activation_3 (PRe  (None, 11, 11, 93)  93          ['inner_egamma_norm_3[0][0]']    
+ LU)                                                                                              
+                                                                                                  
+ inner_muon_activation_3 (PReLU  (None, 11, 11, 77)  77          ['inner_muon_norm_3[0][0]']      
+ )                                                                                                
+                                                                                                  
+ inner_hadrons_activation_3 (PR  (None, 11, 11, 46)  46          ['inner_hadrons_norm_3[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_norm_1 (BatchNor  (None, 19, 19, 64)  256         ['outer_all_3x3_conv_1[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_egamma_dropout_3 (Dropou  (None, 11, 11, 93)  0           ['inner_egamma_activation_3[0][0]
+ t)                                                              ']                               
+                                                                                                  
+ inner_muon_dropout_3 (Dropout)  (None, 11, 11, 77)  0           ['inner_muon_activation_3[0][0]']
+                                                                                                  
+ inner_hadrons_dropout_3 (Dropo  (None, 11, 11, 46)  0           ['inner_hadrons_activation_3[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_activation_1 (PR  (None, 19, 19, 64)  64          ['outer_all_3x3_norm_1[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_cell_concat (Concatenate  (None, 11, 11, 216)  0          ['inner_egamma_dropout_3[0][0]', 
+ )                                                                'inner_muon_dropout_3[0][0]',   
+                                                                  'inner_hadrons_dropout_3[0][0]']
+                                                                                                  
+ outer_all_3x3_dropout_1 (Dropo  (None, 19, 19, 64)  0           ['outer_all_3x3_activation_1[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_conv_1 (Conv2D)      (None, 11, 11, 216)  46872       ['inner_cell_concat[0][0]']      
+                                                                                                  
+ outer_all_3x3_conv_2 (Conv2D)  (None, 17, 17, 64)   36928       ['outer_all_3x3_dropout_1[0][0]']
+                                                                                                  
+ inner_all_norm_1 (BatchNormali  (None, 11, 11, 216)  864        ['inner_all_conv_1[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ outer_all_3x3_norm_2 (BatchNor  (None, 17, 17, 64)  256         ['outer_all_3x3_conv_2[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_activation_1 (PReLU)  (None, 11, 11, 216)  216        ['inner_all_norm_1[0][0]']       
+                                                                                                  
+ outer_all_3x3_activation_2 (PR  (None, 17, 17, 64)  64          ['outer_all_3x3_norm_2[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_dropout_1 (Dropout)  (None, 11, 11, 216)  0           ['inner_all_activation_1[0][0]'] 
+                                                                                                  
+ outer_all_3x3_dropout_2 (Dropo  (None, 17, 17, 64)  0           ['outer_all_3x3_activation_2[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_conv_2 (Conv2D)      (None, 11, 11, 135)  29295       ['inner_all_dropout_1[0][0]']    
+                                                                                                  
+ outer_all_3x3_conv_3 (Conv2D)  (None, 15, 15, 64)   36928       ['outer_all_3x3_dropout_2[0][0]']
+                                                                                                  
+ inner_all_norm_2 (BatchNormali  (None, 11, 11, 135)  540        ['inner_all_conv_2[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ outer_all_3x3_norm_3 (BatchNor  (None, 15, 15, 64)  256         ['outer_all_3x3_conv_3[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_activation_2 (PReLU)  (None, 11, 11, 135)  135        ['inner_all_norm_2[0][0]']       
+                                                                                                  
+ outer_all_3x3_activation_3 (PR  (None, 15, 15, 64)  64          ['outer_all_3x3_norm_3[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_dropout_2 (Dropout)  (None, 11, 11, 135)  0           ['inner_all_activation_2[0][0]'] 
+                                                                                                  
+ outer_all_3x3_dropout_3 (Dropo  (None, 15, 15, 64)  0           ['outer_all_3x3_activation_3[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_conv_3 (Conv2D)      (None, 11, 11, 84)   11424       ['inner_all_dropout_2[0][0]']    
+                                                                                                  
+ outer_all_3x3_conv_4 (Conv2D)  (None, 13, 13, 64)   36928       ['outer_all_3x3_dropout_3[0][0]']
+                                                                                                  
+ inner_all_norm_3 (BatchNormali  (None, 11, 11, 84)  336         ['inner_all_conv_3[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ outer_all_3x3_norm_4 (BatchNor  (None, 13, 13, 64)  256         ['outer_all_3x3_conv_4[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_activation_3 (PReLU)  (None, 11, 11, 84)  84          ['inner_all_norm_3[0][0]']       
+                                                                                                  
+ outer_all_3x3_activation_4 (PR  (None, 13, 13, 64)  64          ['outer_all_3x3_norm_4[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_dropout_3 (Dropout)  (None, 11, 11, 84)   0           ['inner_all_activation_3[0][0]'] 
+                                                                                                  
+ outer_all_3x3_dropout_4 (Dropo  (None, 13, 13, 64)  0           ['outer_all_3x3_activation_4[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_conv_4 (Conv2D)      (None, 11, 11, 64)   5440        ['inner_all_dropout_3[0][0]']    
+                                                                                                  
+ outer_all_3x3_conv_5 (Conv2D)  (None, 11, 11, 64)   36928       ['outer_all_3x3_dropout_4[0][0]']
+                                                                                                  
+ inner_all_norm_4 (BatchNormali  (None, 11, 11, 64)  256         ['inner_all_conv_4[0][0]']       
+ zation)                                                                                          
+                                                                                                  
+ outer_all_3x3_norm_5 (BatchNor  (None, 11, 11, 64)  256         ['outer_all_3x3_conv_5[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_activation_4 (PReLU)  (None, 11, 11, 64)  64          ['inner_all_norm_4[0][0]']       
+                                                                                                  
+ outer_all_3x3_activation_5 (PR  (None, 11, 11, 64)  64          ['outer_all_3x3_norm_5[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_dropout_4 (Dropout)  (None, 11, 11, 64)   0           ['inner_all_activation_4[0][0]'] 
+                                                                                                  
+ outer_all_3x3_dropout_5 (Dropo  (None, 11, 11, 64)  0           ['outer_all_3x3_activation_5[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_3x3_conv_1 (Conv2D)  (None, 9, 9, 64)     36928       ['inner_all_dropout_4[0][0]']    
+                                                                                                  
+ outer_all_3x3_conv_6 (Conv2D)  (None, 9, 9, 64)     36928       ['outer_all_3x3_dropout_5[0][0]']
+                                                                                                  
+ inner_all_3x3_norm_1 (BatchNor  (None, 9, 9, 64)    256         ['inner_all_3x3_conv_1[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_norm_6 (BatchNor  (None, 9, 9, 64)    256         ['outer_all_3x3_conv_6[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_3x3_activation_1 (PR  (None, 9, 9, 64)    64          ['inner_all_3x3_norm_1[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_activation_6 (PR  (None, 9, 9, 64)    64          ['outer_all_3x3_norm_6[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_3x3_dropout_1 (Dropo  (None, 9, 9, 64)    0           ['inner_all_3x3_activation_1[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_dropout_6 (Dropo  (None, 9, 9, 64)    0           ['outer_all_3x3_activation_6[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ inner_all_3x3_conv_2 (Conv2D)  (None, 7, 7, 64)     36928       ['inner_all_3x3_dropout_1[0][0]']
+                                                                                                  
+ outer_all_3x3_conv_7 (Conv2D)  (None, 7, 7, 64)     36928       ['outer_all_3x3_dropout_6[0][0]']
+                                                                                                  
+ inner_all_3x3_norm_2 (BatchNor  (None, 7, 7, 64)    256         ['inner_all_3x3_conv_2[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_norm_7 (BatchNor  (None, 7, 7, 64)    256         ['outer_all_3x3_conv_7[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ inner_all_3x3_activation_2 (PR  (None, 7, 7, 64)    64          ['inner_all_3x3_norm_2[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_activation_7 (PR  (None, 7, 7, 64)    64          ['outer_all_3x3_norm_7[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ inner_all_3x3_dropout_2 (Dropo  (None, 7, 7, 64)    0           ['inner_all_3x3_activation_2[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_dropout_7 (Dropo  (None, 7, 7, 64)    0           ['outer_all_3x3_activation_7[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ input_tau (InputLayer)         [(None, 43)]         0           []                               
+                                                                                                  
+ inner_all_3x3_conv_3 (Conv2D)  (None, 5, 5, 64)     36928       ['inner_all_3x3_dropout_2[0][0]']
+                                                                                                  
+ outer_all_3x3_conv_8 (Conv2D)  (None, 5, 5, 64)     36928       ['outer_all_3x3_dropout_7[0][0]']
+                                                                                                  
+ tau_dense_1 (Dense)            (None, 104)          4576        ['input_tau[0][0]']              
+                                                                                                  
+ inner_all_3x3_norm_3 (BatchNor  (None, 5, 5, 64)    256         ['inner_all_3x3_conv_3[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_norm_8 (BatchNor  (None, 5, 5, 64)    256         ['outer_all_3x3_conv_8[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ tau_norm_1 (BatchNormalization  (None, 104)         416         ['tau_dense_1[0][0]']            
+ )                                                                                                
+                                                                                                  
+ inner_all_3x3_activation_3 (PR  (None, 5, 5, 64)    64          ['inner_all_3x3_norm_3[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_activation_8 (PR  (None, 5, 5, 64)    64          ['outer_all_3x3_norm_8[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ tau_activation_1 (PReLU)       (None, 104)          104         ['tau_norm_1[0][0]']             
+                                                                                                  
+ inner_all_3x3_dropout_3 (Dropo  (None, 5, 5, 64)    0           ['inner_all_3x3_activation_3[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_dropout_8 (Dropo  (None, 5, 5, 64)    0           ['outer_all_3x3_activation_8[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ tau_dropout_1 (Dropout)        (None, 104)          0           ['tau_activation_1[0][0]']       
+                                                                                                  
+ inner_all_3x3_conv_4 (Conv2D)  (None, 3, 3, 64)     36928       ['inner_all_3x3_dropout_3[0][0]']
+                                                                                                  
+ outer_all_3x3_conv_9 (Conv2D)  (None, 3, 3, 64)     36928       ['outer_all_3x3_dropout_8[0][0]']
+                                                                                                  
+ tau_dense_2 (Dense)            (None, 74)           7770        ['tau_dropout_1[0][0]']          
+                                                                                                  
+ inner_all_3x3_norm_4 (BatchNor  (None, 3, 3, 64)    256         ['inner_all_3x3_conv_4[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_norm_9 (BatchNor  (None, 3, 3, 64)    256         ['outer_all_3x3_conv_9[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ tau_norm_2 (BatchNormalization  (None, 74)          296         ['tau_dense_2[0][0]']            
+ )                                                                                                
+                                                                                                  
+ inner_all_3x3_activation_4 (PR  (None, 3, 3, 64)    64          ['inner_all_3x3_norm_4[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_activation_9 (PR  (None, 3, 3, 64)    64          ['outer_all_3x3_norm_9[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ tau_activation_2 (PReLU)       (None, 74)           74          ['tau_norm_2[0][0]']             
+                                                                                                  
+ inner_all_3x3_dropout_4 (Dropo  (None, 3, 3, 64)    0           ['inner_all_3x3_activation_4[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_dropout_9 (Dropo  (None, 3, 3, 64)    0           ['outer_all_3x3_activation_9[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ tau_dropout_2 (Dropout)        (None, 74)           0           ['tau_activation_2[0][0]']       
+                                                                                                  
+ inner_all_3x3_conv_5 (Conv2D)  (None, 1, 1, 64)     36928       ['inner_all_3x3_dropout_4[0][0]']
+                                                                                                  
+ outer_all_3x3_conv_10 (Conv2D)  (None, 1, 1, 64)    36928       ['outer_all_3x3_dropout_9[0][0]']
+                                                                                                  
+ tau_dense_3 (Dense)            (None, 52)           3900        ['tau_dropout_2[0][0]']          
+                                                                                                  
+ inner_all_3x3_norm_5 (BatchNor  (None, 1, 1, 64)    256         ['inner_all_3x3_conv_5[0][0]']   
+ malization)                                                                                      
+                                                                                                  
+ outer_all_3x3_norm_10 (BatchNo  (None, 1, 1, 64)    256         ['outer_all_3x3_conv_10[0][0]']  
+ rmalization)                                                                                     
+                                                                                                  
+ tau_norm_3 (BatchNormalization  (None, 52)          208         ['tau_dense_3[0][0]']            
+ )                                                                                                
+                                                                                                  
+ inner_all_3x3_activation_5 (PR  (None, 1, 1, 64)    64          ['inner_all_3x3_norm_5[0][0]']   
+ eLU)                                                                                             
+                                                                                                  
+ outer_all_3x3_activation_10 (P  (None, 1, 1, 64)    64          ['outer_all_3x3_norm_10[0][0]']  
+ ReLU)                                                                                            
+                                                                                                  
+ tau_activation_3 (PReLU)       (None, 52)           52          ['tau_norm_3[0][0]']             
+                                                                                                  
+ inner_all_3x3_dropout_5 (Dropo  (None, 1, 1, 64)    0           ['inner_all_3x3_activation_5[0][0
+ ut)                                                             ]']                              
+                                                                                                  
+ outer_all_3x3_dropout_10 (Drop  (None, 1, 1, 64)    0           ['outer_all_3x3_activation_10[0][
+ out)                                                            0]']                             
+                                                                                                  
+ tau_dropout_3 (Dropout)        (None, 52)           0           ['tau_activation_3[0][0]']       
+                                                                                                  
+ inner_cells_flatten (Flatten)  (None, 64)           0           ['inner_all_3x3_dropout_5[0][0]']
+                                                                                                  
+ outer_cells_flatten (Flatten)  (None, 64)           0           ['outer_all_3x3_dropout_10[0][0]'
+                                                                 ]                                
+                                                                                                  
+ features_concat (Concatenate)  (None, 180)          0           ['tau_dropout_3[0][0]',          
+                                                                  'inner_cells_flatten[0][0]',    
+                                                                  'outer_cells_flatten[0][0]']    
+                                                                                                  
+ final_dense_1 (Dense)          (None, 200)          36200       ['features_concat[0][0]']        
+                                                                                                  
+ final_norm_1 (BatchNormalizati  (None, 200)         800         ['final_dense_1[0][0]']          
+ on)                                                                                              
+                                                                                                  
+ final_activation_1 (PReLU)     (None, 200)          200         ['final_norm_1[0][0]']           
+                                                                                                  
+ final_dropout_1 (Dropout)      (None, 200)          0           ['final_activation_1[0][0]']     
+                                                                                                  
+ final_dense_2 (Dense)          (None, 200)          40200       ['final_dropout_1[0][0]']        
+                                                                                                  
+ final_norm_2 (BatchNormalizati  (None, 200)         800         ['final_dense_2[0][0]']          
+ on)                                                                                              
+                                                                                                  
+ final_activation_2 (PReLU)     (None, 200)          200         ['final_norm_2[0][0]']           
+                                                                                                  
+ final_dropout_2 (Dropout)      (None, 200)          0           ['final_activation_2[0][0]']     
+                                                                                                  
+ final_dense_3 (Dense)          (None, 200)          40200       ['final_dropout_2[0][0]']        
+                                                                                                  
+ final_norm_3 (BatchNormalizati  (None, 200)         800         ['final_dense_3[0][0]']          
+ on)                                                                                              
+                                                                                                  
+ final_activation_3 (PReLU)     (None, 200)          200         ['final_norm_3[0][0]']           
+                                                                                                  
+ final_dropout_3 (Dropout)      (None, 200)          0           ['final_activation_3[0][0]']     
+                                                                                                  
+ final_dense_4 (Dense)          (None, 200)          40200       ['final_dropout_3[0][0]']        
+                                                                                                  
+ final_norm_4 (BatchNormalizati  (None, 200)         800         ['final_dense_4[0][0]']          
+ on)                                                                                              
+                                                                                                  
+ final_activation_4 (PReLU)     (None, 200)          200         ['final_norm_4[0][0]']           
+                                                                                                  
+ final_dropout_4 (Dropout)      (None, 200)          0           ['final_activation_4[0][0]']     
+                                                                                                  
+ final_dense_last (Dense)       (None, 4)            804         ['final_dropout_4[0][0]']        
+                                                                                                  
+ main_output (Activation)       (None, 4)            0           ['final_dense_last[0][0]']       
+                                                                                                  
+==================================================================================================
+Total params: 1,118,976
+Trainable params: 1,109,334
+Non-trainable params: 9,642
+__________________________________________________________________________________________________

@@ -1,0 +1,15 @@
+artifact_uri: file:///afs/cern.ch/work/s/snandan/public/tauml/TauMLTools/Training/python/mlruns/10/565b4b3a6099428599c9f44b9a003c37/artifacts
+end_time: 1672292135208
+entry_point_name: ''
+experiment_id: '10'
+lifecycle_stage: active
+name: ''
+run_id: 565b4b3a6099428599c9f44b9a003c37
+run_uuid: 565b4b3a6099428599c9f44b9a003c37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672291774963
+status: 4
+tags: []
+user_id: snandan
